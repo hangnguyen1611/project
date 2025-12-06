@@ -37,16 +37,22 @@ Project/
 │
 ├── requirements.txt
 │
+├── __init__.py
+│
 ├── data/
 │   └─ mental_health_dataset.csv
 │
-├── src/ 
-│   ├── Preprocess.py                   
-│   └── ModelTrainer.py   
-│              
-├── output/
-│   ├── new_mental_health_dataset.csv   
-│   ├── Project.ipynb 
+├── preprocessing/
+│   ├── __init__.py   
+│   └── Preprocess.py                   
+│
+├── modeling/ 
+│   ├── __init__.py                  
+│   └── ModelTrainer.py
+|           
+├── notebook/
+│   ├── Project.ipynb
+|   ├── new_mental_health_dataset.csv  
 ```                  
 ## 4. Hướng dẫn cài đặt
 ```python
