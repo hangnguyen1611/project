@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ĐỒ ÁN: DỰ ĐOÁN NGUY CƠ MẮC CÁC VẤN ĐỀ LIÊN QUAN ĐẾN SỨC KHỎE TINH THẦN
 
 ## 1. Giới thiệu đồ án
@@ -86,6 +85,3 @@ optimized_model = trainer_grid.optimize_params(cv=3, scoring='accuracy')
 ```python
 explain["shap_values"]
 ```
-=======
-# Python
->>>>>>> e875a084c5131ab6d43caeb6588725d235b334f0
