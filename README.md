@@ -31,7 +31,7 @@ Dựa vào bối cảnh đó, nhóm lựa chọn ứng dụng các mô hình đ�
 
 ## 3. Cấu trúc 
 ```
-Project/
+project/
 │
 ├── README.md
 │
