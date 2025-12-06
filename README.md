@@ -1,4 +1,4 @@
-# ĐỒ ÁN: DỰ ĐOÁN NGUY CƠ MẮC CÁC VẤN ĐỀ LIÊN QUAN ĐẾN SỨC KHỎE TINH THẦN
+# PROJECT: DỰ ĐOÁN NGUY CƠ MẮC CÁC VẤN ĐỀ LIÊN QUAN ĐẾN SỨC KHỎE TINH THẦN
 
 ## 1. Giới thiệu đồ án
 Thực trạng về sức khỏe tinh thần đang là một vấn đề đáng báo động trên toàn cầu. Theo Tổ chức Y tế Thế giới (WHO), ước tính có gần một tỷ người trên thế giới đang sống chung với chứng rối loạn tâm thần. Cụ thể hơn, tại Việt Nam, theo thống kê, khoảng 15% dân số mắc các rối loạn tâm thần phổ biến, trong đó có tới ba triệu người bị rối loạn trầm cảm. 
