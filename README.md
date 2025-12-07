@@ -59,8 +59,10 @@ _Chạy trên file Project.ipynb_
 
 ### a. Import Module
 ```python
-from Model import ModelTrainer
-from Preprocess import DataPreprocessor
+import sys
+sys.path.append('../../')
+
+from project import *
 ```
 
 ### b. Tiền xử lý dữ liệu
@@ -70,18 +72,29 @@ d.summary()
 ```
 ### c. Huấn luyện và đánh giá mô hình
 ```python
-trainer_grid = ModelTrainer(random_seed=42, preprocessor=d)
-trainer_grid.load_data("new_mental_health_dataset.csv", target='mental_health_risk').head()
+trainer = ModelTrainer.load_data("new_mental_health_dataset.csv", target="mental_health_risk")
+trainer.split_data()
 
-optimized_model = trainer_grid.optimize_params(cv=3, scoring='accuracy')
+# Huấn luyện mô hình
+trainer.train_model(model_type="logistic")
 
-best_model = trainer_grid.train_model(metric='accuracy')
+# Đánh giá 
+trainer.evaluate()
 ```
-### d. Tối ưu siêu tham số
+### d. Chọn mô hình tốt nhất và tối ưu tham số
 ```python
-optimized_model = trainer_grid.optimize_params(cv=3, scoring='accuracy')
+# Chọn mô hình tốt nhất
+best_model_grid = trainer.best_model()
+best_model_optuna = trainer.best_model(method="optuna")
+
+# Tối ưu tham số
+trainer.optimize_params_with_grid_search()
+trainer.optimize_params_with_optuna(model_type="logistic")
 ```
-### e. Giải thích giá trị
+### e. Giải thích model với SHAP
 ```python
 explain["shap_values"]
+
+# Vẽ SHAP force plot cho 1 mẫu cụ thể
+trainer.shap_force_plot(sample_index=200, encoders=encoders, scaler=scaler, num_cols=num_cols)
 ```
