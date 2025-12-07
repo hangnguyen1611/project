@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ĐỒ ÁN: DỰ ĐOÁN NGUY CƠ MẮC CÁC VẤN ĐỀ LIÊN QUAN ĐẾN SỨC KHỎE TINH THẦN
 
 ## 1. Giới thiệu đồ án
