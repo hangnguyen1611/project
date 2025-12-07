@@ -95,6 +95,6 @@ trainer.optimize_params_with_optuna(model_type="logistic")
 ```python
 explain["shap_values"]
 
-# Vẽ SHAP force plot cho 1 mẫu cụ thể
+# Vẽ SHAP force plot cho 1 mẫu cụ thể (sample_index=200)
 trainer.shap_force_plot(sample_index=200, encoders=encoders, scaler=scaler, num_cols=num_cols)
 ```
