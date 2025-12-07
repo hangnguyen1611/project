@@ -86,6 +86,3 @@ optimized_model = trainer_grid.optimize_params(cv=3, scoring='accuracy')
 ```python
 explain["shap_values"]
 ```
-=======
-# Python
->>>>>>> e875a084c5131ab6d43caeb6588725d235b334f0
