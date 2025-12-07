@@ -1,6 +1,6 @@
-# PROJECT: DỰ ĐOÁN NGUY CƠ MẮC CÁC VẤN ĐỀ LIÊN QUAN ĐẾN SỨC KHỎE TINH THẦN
+# ĐỒ ÁN: DỰ ĐOÁN NGUY CƠ MẮC CÁC VẤN ĐỀ LIÊN QUAN ĐẾN SỨC KHỎE TINH THẦN
 
-## 1. Giới thiệu dự án
+## 1. Giới thiệu đồ án
 Thực trạng về sức khỏe tinh thần đang là một vấn đề đáng báo động trên toàn cầu. Theo Tổ chức Y tế Thế giới (WHO), ước tính có gần một tỷ người trên thế giới đang sống chung với chứng rối loạn tâm thần. Cụ thể hơn, tại Việt Nam, theo thống kê, khoảng 15% dân số mắc các rối loạn tâm thần phổ biến, trong đó có tới ba triệu người bị rối loạn trầm cảm. 
 
 Dựa vào bối cảnh đó, nhóm lựa chọn ứng dụng các mô hình để dự đoán nguy cơ mắc các vấn đề liên quan sức khỏe tinh thần dựa vào các yếu tố như tuổi tác, giới tính, môi trường làm việc,... Việc dự đoán này không chỉ hỗ trợ trong việc phát hiện và can thiệp sớm mà còn giảm thiểu gánh nặng y tế.
@@ -31,28 +31,22 @@ Dựa vào bối cảnh đó, nhóm lựa chọn ứng dụng các mô hình đ�
 
 ## 3. Cấu trúc 
 ```
-project/
+Project/
 │
 ├── README.md
 │
 ├── requirements.txt
 │
-├── __init__.py
-│
 ├── data/
 │   └─ mental_health_dataset.csv
 │
-├── preprocessing/
-│   ├── __init__.py   
-│   └── Preprocess.py                   
-│
-├── modeling/ 
-│   ├── __init__.py                  
-│   └── ModelTrainer.py
-|           
-├── notebook/
-│   ├── Project.ipynb
-|   ├── new_mental_health_dataset.csv  
+├── src/ 
+│   ├── Preprocess.py                   
+│   └── ModelTrainer.py   
+│              
+├── output/
+│   ├── new_mental_health_dataset.csv   
+│   ├── Project.ipynb 
 ```                  
 ## 4. Hướng dẫn cài đặt
 ```python
@@ -65,8 +59,10 @@ _Chạy trên file Project.ipynb_
 
 ### a. Import Module
 ```python
-from Model import ModelTrainer
-from Preprocess import DataPreprocessor
+import sys
+sys.path.append('../../')
+
+from project import *
 ```
 
 ### b. Tiền xử lý dữ liệu
@@ -76,18 +72,29 @@ d.summary()
 ```
 ### c. Huấn luyện và đánh giá mô hình
 ```python
-trainer_grid = ModelTrainer(random_seed=42, preprocessor=d)
-trainer_grid.load_data("new_mental_health_dataset.csv", target='mental_health_risk').head()
+trainer = ModelTrainer.load_data("new_mental_health_dataset.csv", target="mental_health_risk")
+trainer.split_data()
 
-optimized_model = trainer_grid.optimize_params(cv=3, scoring='accuracy')
+# Huấn luyện mô hình
+trainer.train_model(model_type="logistic")
 
-best_model = trainer_grid.train_model(metric='accuracy')
+# Đánh giá 
+trainer.evaluate()
 ```
-### d. Tối ưu siêu tham số
+### d. Chọn mô hình tốt nhất và tối ưu tham số
 ```python
-optimized_model = trainer_grid.optimize_params(cv=3, scoring='accuracy')
+# Chọn mô hình tốt nhất
+best_model_grid = trainer.best_model()
+best_model_optuna = trainer.best_model(method="optuna")
+
+# Tối ưu tham số
+trainer.optimize_params_with_grid_search()
+trainer.optimize_params_with_optuna(model_type="logistic")
 ```
-### e. Giải thích giá trị
+### e. Giải thích model với SHAP
 ```python
 explain["shap_values"]
+
+# Vẽ SHAP force plot cho 1 mẫu cụ thể (sample_index=200)
+trainer.shap_force_plot(sample_index=200, encoders=encoders, scaler=scaler, num_cols=num_cols)
 ```
