@@ -323,6 +323,29 @@ class DataPreprocessor:
         plt.ylabel("")
         plt.tight_layout()
         plt.show()
+        
+    def kdeplot_by_target(self, target_col='mental_health_risk'):
+        """
+        Vẽ biểu đồ KDE cho các cột số, phân theo các giá trị của target_col.
+        """
+        n = len(self.numeric_cols)
+        rows = (n + 2) // 3                         # 3 biểu đồ mỗi hàng
+        plt.figure(figsize=(14, 4 * rows))
+
+        for i, col in enumerate(self.numeric_cols, 1):
+            plt.subplot(rows, 3, i)
+
+            for target_value in self.data[target_col].unique():
+                subset = self.data[self.data[target_col] == target_value]
+                sns.kdeplot(subset[col], label=f"{target_col}={target_value}", fill=True, alpha=0.5)
+
+            plt.title(f"KDE of {col} by {target_col}")
+            plt.xlabel(col)
+            plt.ylabel("Density")
+            plt.legend()
+
+        plt.tight_layout()
+        plt.show()
     
     # ------------------ 9. Trả về dữ liệu sau khi tiền xử lý ------------------ #
     def get_processed_data(self):
