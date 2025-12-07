@@ -1,7 +1,7 @@
 from .preprocessing.Preprocess import DataPreprocessor
-from .modeling.Model import ModelTrainer
+from .modeling.pipeline_model import ModelTrainPipeline
 
 __all__ = [
     "DataPreprocessor",
-    "ModelTrainer"
+    "ModelTrainPipeline"
 ]
