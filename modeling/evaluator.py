@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, confusion_matrix
 import seaborn as sns
@@ -47,13 +46,27 @@ class EvaluateModel:
 
         return pd.DataFrame([metrics])
 
-    def plot_confusion_matrix(self):
+    def plot_confusion_matrix(self, encoders=None, target=None):
         """
         Vẽ ma trận nhầm lẫn.
         """
-        y_pred = self.model.predict(self.X)
-        cm = confusion_matrix(self.y, y_pred)
-        labels = np.unique(self.y)
+        if not encoders or target not in encoders:
+            y_true = self.y
+            y_pred = self.model.predict(self.X)
+        else:
+            info = encoders[target]
+            enc = info["encoder"]
+
+            try:
+                y_true = enc.inverse_transform(self.y.astype(int))
+                y_pred = enc.inverse_transform(self.model.predict(self.X).astype(int))
+            except Exception:
+                y_true = self.y
+                y_pred = self.model.predict(self.X)
+
+        labels = sorted(set(y_true) | set(y_pred))
+
+        cm = confusion_matrix(y_true, y_pred, labels=labels)
 
         plt.figure(figsize=(6, 4))
         sns.heatmap(

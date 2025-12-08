@@ -7,10 +7,10 @@ from pathlib import Path
 from sklearn.model_selection import train_test_split
 
 from ..logs import logger
-from .model_trainer import TrainModel
+from .model_trainer import ModelTrainer
 from .grid_tuner import GridTuner
 from .optuna_tuner import OptunaTuner
-from .best_model import BestModelSelector
+from .best_model_selector import BestModelSelector
 from .evaluator import EvaluateModel
 from .explainer import SHAPExplainer
 
@@ -99,7 +99,7 @@ class ModelTrainPipeline:
             - model_name: tên model.
             - model: model muốn train.
         """
-        trainer = TrainModel(model=model, model_name=model_name, seed=self.random_seed)
+        trainer = ModelTrainer(model=model, model_name=model_name, seed=self.random_seed)
 
         self.model = trainer.fit(self.X_train, self.y_train, self.X_test, self.y_test)
         self.shap_explainer = None
@@ -154,12 +154,12 @@ class ModelTrainPipeline:
         return results
 
     # ------------------ 6. Đánh giá mô hình ------------------ #
-    def evaluate(self):
+    def evaluate(self, encoders=None):
         """
         Đánh giá mô hình.
         """
         evaluator = EvaluateModel(self.X_test, self.y_test, self.model)
-        evaluator.plot_confusion_matrix()
+        evaluator.plot_confusion_matrix(encoders=encoders, target=self.target)
         return evaluator.evaluate()
     
     def explain(self):
@@ -200,23 +200,34 @@ class ModelTrainPipeline:
         return self.explain().force(sample_index)
 
     # ------------------ 8. Save và Load mô hình------------------ #
-    def save(self, path="model.pkl"):
+    def save(self, output_path_str="model.pkl"):
         """
         Lưu mô hình bằng joblib.
 
         Tham số đầu vào:
             - path: tên file hoặc đường dẫn lưu file.
         """
-        joblib.dump(self.model, path)
-        logger.info(f"Model saved to {path}")
+        output_path = Path(output_path_str)
+        if output_path.exists() or output_path.is_absolute() or '/' in output_path_str or '\\' in output_path_str:
+            file_path = output_path
+        else:
+            current_file_path = Path(__file__)
+            file_path = current_file_path.parent.parent / 'modeling' / output_path
+        joblib.dump(self.model, file_path)
 
-    def load(self, path):
+    def load(self, input_path_str):
         """
         Nạp mô hình bằng joblib.
 
         Tham số đầu vào:
             - path: tên file hoặc đường dẫn file.
         """
-        self.model = joblib.load(path)
-        logger.info(f"Model loaded from {path}")
+        input_path = Path(input_path_str)
+        if input_path.exists() or input_path.is_absolute() or '/' in input_path_str or '\\' in input_path_str:
+            input_path_str = input_path
+        else:
+            current_file_path = Path(__file__)
+            file_path = current_file_path.parent.parent / 'modeling' / input_path
+        joblib.dump(self.model, file_path)
+        self.model = joblib.load(file_path)
         return self.model

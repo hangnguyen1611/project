@@ -30,7 +30,7 @@ class SHAPExplainer:
 
     def _compute_shap(self):
         """
-        Tính giá SHAP values.
+        Tính SHAP value.
         """
         try:
             return self.explainer.shap_values(self.X_test)

@@ -1,15 +1,10 @@
 numpy
 pandas
-random
 seaborn
 matplotlib
 scikit-learn
 xgboost
 lightgbm
 optuna
-optuna-integration[lightgbm]
 shap
-logging
 joblib
-os
-warnings

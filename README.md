@@ -1,15 +1,10 @@
 # ĐỒ ÁN: DỰ ĐOÁN NGUY CƠ MẮC CÁC VẤN ĐỀ LIÊN QUAN ĐẾN SỨC KHỎE TINH THẦN
 
-## 1. Giới thiệu đồ án
-Thực trạng về sức khỏe tinh thần đang là một vấn đề đáng báo động trên toàn cầu. Theo Tổ chức Y tế Thế giới (WHO), ước tính có gần một tỷ người trên thế giới đang sống chung với chứng rối loạn tâm thần. Cụ thể hơn, tại Việt Nam, theo thống kê, khoảng 15% dân số mắc các rối loạn tâm thần phổ biến, trong đó có tới ba triệu người bị rối loạn trầm cảm. 
-
-Dựa vào bối cảnh đó, nhóm lựa chọn ứng dụng các mô hình để dự đoán nguy cơ mắc các vấn đề liên quan sức khỏe tinh thần dựa vào các yếu tố như tuổi tác, giới tính, môi trường làm việc,... Việc dự đoán này không chỉ hỗ trợ trong việc phát hiện và can thiệp sớm mà còn giảm thiểu gánh nặng y tế.
-
-### Xác định bài toán
-* Lĩnh vực: Sức khỏe
-* Loại bài toán chính: Classification
+## 1. Xác định bài toán
+* Lĩnh vực: Sức khỏe.
+* Loại bài toán chính: Classification.
 * Input: Dữ liệu đầu vào bao gồm `gender`, `age`, `employment_status`, `work_environment`,...
-* Output: Dữ liệu đầu ra - target là `mental_health_risk`.
+* Output: Dữ liệu đầu ra - `target` là `mental_health_risk`.
 
 ## 2. Giới thiệu Dataset
 | Cột | Mô tả |
@@ -31,22 +26,33 @@ Dựa vào bối cảnh đó, nhóm lựa chọn ứng dụng các mô hình đ�
 
 ## 3. Cấu trúc 
 ```
-Project/
-│
-├── README.md
-│
-├── requirements.txt
-│
+project/
 ├── data/
-│   └─ mental_health_dataset.csv
-│
-├── src/ 
-│   ├── Preprocess.py                   
-│   └── ModelTrainer.py   
-│              
-├── output/
-│   ├── new_mental_health_dataset.csv   
-│   ├── Project.ipynb 
+│   └── mental_health_dataset.csv  
+|
+├── logs/
+│   └── logger.py                  
+|
+├── modeling/
+│   ├── best_model_selector.py     (Chọn mô hình tốt nhất)
+│   ├── evaluator.py               (Đánh giá mô hình)
+│   ├── explainer.py               (Giải thích mô hình bằng SHAP)
+│   ├── grid_tuner.py              (Tối ưu siêu tham số Grid Search)
+│   ├── model_config.py            (Cấu hình mô hình)
+│   ├── model_trainer.py           (Huấn luyện mô hình)
+│   ├── optuna_tuner.py            (Tối ưu siêu tham số Optuna)
+│   └── pipeline_model.py          (Pipeline mô hình)
+|
+├── notebook/
+│   └── project.ipynb              (Notebook chính)
+|
+├── preprocessing/
+│   ├── preprocessor.py            (Tiền xử lý dữ liệu)
+│   └── visualizer.py              (Trực quan hóa dữ liệu)
+|
+├── __init__.py                    
+├── README.md                 
+└── requirements.txt              
 ```                  
 ## 4. Hướng dẫn cài đặt
 ```python
@@ -55,7 +61,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 ## 5. Hướng dẫn chạy
-_Chạy trên file Project.ipynb_
+_Chạy trên file project.ipynb để xem quá trình tiền xử lý và huấn luyện mô hình._
 
 ### a. Import Module
 ```python
@@ -70,31 +76,38 @@ from project import *
 d = DataPreprocessor.load('mental_health_dataset.csv')
 d.summary()
 ```
+_File dữ liệu sau khi tiền xử lý sẽ được lưu tại thư mục `data`._
 ### c. Huấn luyện và đánh giá mô hình
 ```python
-trainer = ModelTrainer.load_data("new_mental_health_dataset.csv", target="mental_health_risk")
-trainer.split_data()
+pipe = (
+    ModelTrainPipeline(random_seed=42, scaler=scaler, encoders=encoders, num_cols=num_cols)
+    .load_data(data="new_mental_health_dataset.csv", target="mental_health_risk")
+    .split_data()
+)
 
 # Huấn luyện mô hình
-trainer.train_model(model_type="logistic")
+pipe.train(model_name="logistic")
 
 # Đánh giá 
-trainer.evaluate()
+pipe.evaluate(encoders=encoders)
 ```
 ### d. Chọn mô hình tốt nhất và tối ưu tham số
 ```python
 # Chọn mô hình tốt nhất
-best_model_grid = trainer.best_model()
-best_model_optuna = trainer.best_model(method="optuna")
+best_model = pipe.select_best_model()
+best_model = pipe.select_best_model(method="grid)
 
 # Tối ưu tham số
-trainer.optimize_params_with_grid_search()
-trainer.optimize_params_with_optuna(model_type="logistic")
+pipe.optimize_params()
+pipe.optimize_params(method="grid")
 ```
 ### e. Giải thích model với SHAP
 ```python
-explain["shap_values"]
-
-# Vẽ SHAP force plot cho 1 mẫu cụ thể (sample_index=200)
-trainer.shap_force_plot(sample_index=200, encoders=encoders, scaler=scaler, num_cols=num_cols)
+# Vẽ SHAP plot
+pipe.shap_beeswarm()
+pipe.shap_dependence()
+pipe.shap_force(sample_index=200)
 ```
+_Kết quả train model sẽ được xuất file và lưu tại thư mục `modeling`._
+### f. Theo dõi log
+Các thông báo về quá trình _train model_ sẽ được lưu trữ tại thư mục `logs`.

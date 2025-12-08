@@ -1,0 +1,82 @@
+2025-12-08 17:12:43,428 - INFO - Building baseline model: logistic
+2025-12-08 17:12:43,428 - INFO - Training LogisticRegression
+2025-12-08 17:12:43,483 - INFO - LogisticRegression trained successfully
+2025-12-08 17:12:44,042 - INFO - Building baseline model: randomforest
+2025-12-08 17:12:44,043 - INFO - Training RandomForestClassifier
+2025-12-08 17:12:44,298 - INFO - RandomForestClassifier trained successfully
+2025-12-08 17:13:10,266 - INFO - Building baseline model: lightgbm
+2025-12-08 17:13:10,266 - INFO - Training LGBMClassifier
+2025-12-08 17:13:13,015 - INFO - LGBMClassifier trained successfully
+2025-12-08 17:13:13,913 - INFO - Building baseline model: xgboost
+2025-12-08 17:13:13,913 - INFO - Training XGBClassifier
+2025-12-08 17:13:14,226 - INFO - XGBClassifier trained successfully
+2025-12-08 17:13:14,857 - INFO - Chọn mô hình tốt nhất...
+2025-12-08 17:13:14,858 - INFO - Training logistic...
+2025-12-08 17:13:14,858 - INFO - Building baseline model: logistic
+2025-12-08 17:13:14,858 - INFO - Training LogisticRegression
+2025-12-08 17:13:14,970 - INFO - LogisticRegression trained successfully
+2025-12-08 17:13:15,002 - INFO - logistic f1: 0.9995
+2025-12-08 17:13:15,002 - INFO - Training randomforest...
+2025-12-08 17:13:15,002 - INFO - Building baseline model: randomforest
+2025-12-08 17:13:15,002 - INFO - Training RandomForestClassifier
+2025-12-08 17:13:15,318 - INFO - RandomForestClassifier trained successfully
+2025-12-08 17:13:15,431 - INFO - randomforest f1: 0.9694
+2025-12-08 17:13:15,431 - INFO - Training xgboost...
+2025-12-08 17:13:15,431 - INFO - Building baseline model: xgboost
+2025-12-08 17:13:15,431 - INFO - Training XGBClassifier
+2025-12-08 17:13:15,803 - INFO - XGBClassifier trained successfully
+2025-12-08 17:13:15,834 - INFO - xgboost f1: 1.0000
+2025-12-08 17:13:15,834 - INFO - Training lightgbm...
+2025-12-08 17:13:15,834 - INFO - Building baseline model: lightgbm
+2025-12-08 17:13:15,834 - INFO - Training LGBMClassifier
+2025-12-08 17:13:16,455 - INFO - LGBMClassifier trained successfully
+2025-12-08 17:13:16,487 - INFO - lightgbm f1: 1.0000
+2025-12-08 17:13:16,487 - INFO - Mô hình được chọn: xgboost, score = 1.0000
+2025-12-08 17:13:16,487 - INFO - Tối ưu tham số cho xgboost...
+2025-12-08 17:13:16,487 - INFO - Tối ưu tham số với Optuna...
+2025-12-08 17:13:18,137 - INFO - Trial 0 - params: {'n_estimators': 150, 'learning_rate': 0.1540359659501924, 'max_depth': 7, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9952034261311343
+2025-12-08 17:13:19,823 - INFO - Trial 1 - params: {'n_estimators': 100, 'learning_rate': 0.001360354613611808, 'max_depth': 8, 'subsample': 0.8404460046972835, 'colsample_bytree': 0.8540362888980227, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9916266890571572
+2025-12-08 17:13:21,086 - INFO - Trial 2 - params: {'n_estimators': 100, 'learning_rate': 0.17052641538983093, 'max_depth': 7, 'subsample': 0.6849356442713105, 'colsample_bytree': 0.5909124836035503, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9942731748900782
+2025-12-08 17:13:22,324 - INFO - Trial 3 - params: {'n_estimators': 100, 'learning_rate': 0.005012686302434875, 'max_depth': 6, 'subsample': 0.7727780074568463, 'colsample_bytree': 0.645614570099021, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9632458396604054
+2025-12-08 17:13:24,249 - INFO - Trial 4 - params: {'n_estimators': 250, 'learning_rate': 0.002094013887393744, 'max_depth': 4, 'subsample': 0.7465447373174767, 'colsample_bytree': 0.728034992108518, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9387940281942978
+2025-12-08 17:13:28,724 - INFO - Trial 10 - params: {'n_estimators': 150, 'learning_rate': 0.14013397578557643, 'max_depth': 8, 'subsample': 0.6071847502459279, 'colsample_bytree': 0.5076838686640521, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9933746865412868
+2025-12-08 17:13:29,910 - INFO - Trial 11 - params: {'n_estimators': 150, 'learning_rate': 0.18680462820461602, 'max_depth': 7, 'subsample': 0.6719331269140577, 'colsample_bytree': 0.8218563683119118, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9971914725217547
+2025-12-08 17:13:31,279 - INFO - Trial 12 - params: {'n_estimators': 150, 'learning_rate': 0.060946846664015675, 'max_depth': 7, 'subsample': 0.6861163483524778, 'colsample_bytree': 0.8339538705408651, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980551654957495
+2025-12-08 17:13:32,724 - INFO - Trial 13 - params: {'n_estimators': 150, 'learning_rate': 0.05047558492134032, 'max_depth': 7, 'subsample': 0.6609562456023955, 'colsample_bytree': 0.8418107582650314, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981785852474537
+2025-12-08 17:13:34,186 - INFO - Trial 14 - params: {'n_estimators': 200, 'learning_rate': 0.049937519849628964, 'max_depth': 5, 'subsample': 0.6209434239245378, 'colsample_bytree': 0.9015019989115804, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980557246231178
+2025-12-08 17:13:35,692 - INFO - Trial 15 - params: {'n_estimators': 200, 'learning_rate': 0.03902041227436321, 'max_depth': 5, 'subsample': 0.6192731778108003, 'colsample_bytree': 0.960347899457147, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984258881837591
+2025-12-08 17:13:37,273 - INFO - Trial 16 - params: {'n_estimators': 200, 'learning_rate': 0.03136735010082351, 'max_depth': 5, 'subsample': 0.7291444537057288, 'colsample_bytree': 0.9983899997392717, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983030267067807
+2025-12-08 17:13:38,850 - INFO - Trial 17 - params: {'n_estimators': 200, 'learning_rate': 0.01988261877555727, 'max_depth': 5, 'subsample': 0.7302280377070337, 'colsample_bytree': 0.9980084946806067, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980566093998612
+2025-12-08 17:13:41,376 - INFO - Trial 20 - params: {'n_estimators': 200, 'learning_rate': 0.08074708704115686, 'max_depth': 5, 'subsample': 0.646969204078556, 'colsample_bytree': 0.953286131001336, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998179514203894
+2025-12-08 17:13:42,821 - INFO - Trial 21 - params: {'n_estimators': 200, 'learning_rate': 0.08546829525130939, 'max_depth': 5, 'subsample': 0.6405321213255016, 'colsample_bytree': 0.9679606782372898, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9979330965861243
+2025-12-08 17:13:45,845 - INFO - Trial 25 - params: {'n_estimators': 200, 'learning_rate': 0.09092913101293477, 'max_depth': 6, 'subsample': 0.7668002402591811, 'colsample_bytree': 0.8888030765280213, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981785121458225
+2025-12-08 17:13:48,126 - INFO - Trial 27 - params: {'n_estimators': 250, 'learning_rate': 0.03916181126724674, 'max_depth': 5, 'subsample': 0.6428601662152831, 'colsample_bytree': 0.9341135021231856, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984253521996522
+2025-12-08 17:13:50,636 - INFO - Trial 28 - params: {'n_estimators': 300, 'learning_rate': 0.035157340238680924, 'max_depth': 6, 'subsample': 0.6010884550142419, 'colsample_bytree': 0.925229344657053, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983017941541824
+2025-12-08 17:13:51,218 - INFO - Best params: {'n_estimators': 200, 'learning_rate': 0.03902041227436321, 'max_depth': 5, 'subsample': 0.6192731778108003, 'colsample_bytree': 0.960347899457147, 'random_state': 42}
+2025-12-08 17:13:51,544 - INFO - Best model: xgboost with optimized params.
+2025-12-08 17:13:54,094 - INFO - Chọn mô hình tốt nhất...
+2025-12-08 17:13:54,095 - INFO - Training logistic...
+2025-12-08 17:13:54,095 - INFO - Building baseline model: logistic
+2025-12-08 17:13:54,095 - INFO - Training LogisticRegression
+2025-12-08 17:13:54,154 - INFO - LogisticRegression trained successfully
+2025-12-08 17:13:54,165 - INFO - logistic f1: 0.9995
+2025-12-08 17:13:54,165 - INFO - Training randomforest...
+2025-12-08 17:13:54,165 - INFO - Building baseline model: randomforest
+2025-12-08 17:13:54,165 - INFO - Training RandomForestClassifier
+2025-12-08 17:13:54,389 - INFO - RandomForestClassifier trained successfully
+2025-12-08 17:13:54,454 - INFO - randomforest f1: 0.9694
+2025-12-08 17:13:54,454 - INFO - Training xgboost...
+2025-12-08 17:13:54,454 - INFO - Building baseline model: xgboost
+2025-12-08 17:13:54,454 - INFO - Training XGBClassifier
+2025-12-08 17:13:54,689 - INFO - XGBClassifier trained successfully
+2025-12-08 17:13:54,708 - INFO - xgboost f1: 1.0000
+2025-12-08 17:13:54,708 - INFO - Training lightgbm...
+2025-12-08 17:13:54,708 - INFO - Building baseline model: lightgbm
+2025-12-08 17:13:54,708 - INFO - Training LGBMClassifier
+2025-12-08 17:13:54,955 - INFO - LGBMClassifier trained successfully
+2025-12-08 17:13:54,974 - INFO - lightgbm f1: 1.0000
+2025-12-08 17:13:54,974 - INFO - Mô hình được chọn: xgboost, score = 1.0000
+2025-12-08 17:13:54,974 - INFO - Tối ưu tham số cho xgboost...
+2025-12-08 17:13:54,974 - INFO - Tối ưu tham số với GridSearch...
+2025-12-08 17:14:18,990 - INFO - Best params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}, best CV score: 0.9989
+2025-12-08 17:14:18,994 - INFO - Best model: xgboost with optimized params.

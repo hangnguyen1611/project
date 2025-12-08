@@ -12,7 +12,7 @@ from ..logs import logger
 logger.setup_logger()
 logger = logging.getLogger(__name__)
 
-class TrainModel:
+class ModelTrainer:
     """
     Lớp này dùng để huấn luyện mô hình:
         - Huấn luyện nhanh bằng model_name (baseline).
