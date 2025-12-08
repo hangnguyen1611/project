@@ -1,6 +1,8 @@
-import sys
-sys.path.append('..')
-from preprocessing import *
+import pandas as pd
+import numpy as np
+from pathlib import Path
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder, OneHotEncoder
+from sklearn.ensemble import IsolationForest
 
 class DataPreprocessor:
     def __init__(self, data=None, missing_strategy='median', outlier_type='IQR', scaler_type='standard', encoding_type='label'):
@@ -200,154 +202,14 @@ class DataPreprocessor:
             self.data[self.numeric_cols] = self.minmax.fit_transform(self.data[self.numeric_cols])
             return self.minmax
 
-    # ------------------6. Tạo đặc trưng mới------------------ #
+    # ------------------ 6. Tạo đặc trưng mới------------------ #
     def create_new_feature(self):
         # Đánh giá hiệu suất làm việc dựa trên mức stress
         self.data['productivity_base_on_stress'] = self.data['productivity_score'] / self.data['stress_level']
         self.numeric_cols.append("productivity_base_on_stress")
         return self
     
-    # ------------------ 8. Visualize ------------------ #
-    def _subplot(self, columns, plot_func, n_cols=3, figsize=(15, 10)):
-        n = len(columns)
-        rows = (n + n_cols - 1) // n_cols
-
-        plt.figure(figsize=figsize)
-        for i, col in enumerate(columns, 1):
-            plt.subplot(rows, n_cols, i)
-            plot_func(col)
-            plt.title(col)
-        plt.tight_layout()
-        plt.show()
-
-    def histogram(self):
-        """
-        Tạo các histogram cho các cột dữ liệu số.
-        """
-        self._subplot(self.numeric_cols,
-                      lambda col: sns.histplot(self.data[col], kde=True, edgecolor="black"))
-
-    def barplot(self):
-        """
-        Vẽ barplot cho các cột phân loại.
-        """
-        self._subplot(self.categorical_cols,
-                      lambda col: sns.countplot(y=self.data[col], edgecolor="black", palette="pastel"))
-        
-    def boxplot_for_numeric_cols(self, title=None):
-        numeric_df = self.data[self.numeric_cols]   # dataframe chỉ chứa các cột số
-
-        n = len(self.numeric_cols)
-        rows = (n + 2) // 3                         # 3 biểu đồ mỗi hàng
-        plt.figure(figsize=(14, 4 * rows))
-
-        for i, col in enumerate(self.numeric_cols, 1):
-            plt.subplot(rows, 3, i)
-            numeric_df.boxplot(column=col)
-            plt.title(col)
-
-        plt.suptitle(title, fontsize=16)
-        plt.tight_layout()
-        plt.show()
-
-    # ------------------ 9. Kiểm tra tương quan ------------------ #
-    def heatmap(self):
-        """
-        Vẽ heatmap cho tất cả các cột (dùng với dữ liệu đã encode). 
-        """
-        plt.figure(figsize=(14, 10))
-
-        sns.heatmap(
-            self.data.corr(),
-            annot=True,
-            fmt=".2f",
-            cmap="coolwarm",
-            linewidths=0.5
-        )
-
-        plt.title("Heatmap cho bộ dữ liệu", fontsize=18)
-        plt.tight_layout()
-        plt.show()
-
-    def scatter(self, target=None):
-        """
-        Vẽ scatter giữa các cột số với target
-        """
-        y = self.data[target].values
-
-        plt.figure(figsize=(15, 5))
-
-        n = len(self.numeric_cols)
-        rows = (n + 2) // 3                         # 3 biểu đồ mỗi hàng
-        plt.figure(figsize=(14, 4 * rows))
-
-        for i, col in enumerate(self.numeric_cols, 1):
-            plt.subplot(rows, 3, i)
-
-            x = self.data[col].values
-            plt.scatter(x, y, alpha=0.7)
-
-            # Thêm đường hồi quy
-            coeffs = np.polyfit(x, y, 1)
-            xs = np.linspace(x.min(), x.max(), 100)
-            plt.plot(xs, np.polyval(coeffs, xs), color="red", linestyle='--')
-
-            plt.title(f"{col} vs {target}")
-            plt.xlabel(col)
-            plt.ylabel(target)
-
-        plt.tight_layout()
-        plt.show()
-
-    def heatmap_one_column(self, target=None):
-        """
-        Vẽ heatmap dạng 1 cột thể hiện tương quan giữa các đặc trưng số và target.
-        """
-        # Lấy các cột số để tính tương quan
-        numeric_cols = self.data.select_dtypes(include=['int64', 'float64']).columns.tolist()
-
-        # Tính tương quan với target
-        corr = self.data[numeric_cols].corr()[[target]].sort_values(by=target, ascending=False)
-
-        plt.figure(figsize=(10, 5))
-        sns.heatmap(
-            corr,
-            annot=True,
-            fmt=".3f",
-            cmap="coolwarm",
-            cbar=True
-        )
-
-        plt.title(f"Tương quan với {target}", fontsize=13)
-        plt.xlabel("")
-        plt.ylabel("")
-        plt.tight_layout()
-        plt.show()
-        
-    def kdeplot_by_target(self, target_col='mental_health_risk'):
-        """
-        Vẽ biểu đồ KDE cho các cột số, phân theo các giá trị của target_col.
-        """
-        n = len(self.numeric_cols)
-        rows = (n + 2) // 3                         # 3 biểu đồ mỗi hàng
-        plt.figure(figsize=(14, 4 * rows))
-
-        for i, col in enumerate(self.numeric_cols, 1):
-            plt.subplot(rows, 3, i)
-
-            for target_value in self.data[target_col].unique():
-                subset = self.data[self.data[target_col] == target_value]
-                sns.kdeplot(subset[col], label=f"{target_col}={target_value}", fill=True, alpha=0.5)
-
-            plt.title(f"KDE of {col} by {target_col}")
-            plt.xlabel(col)
-            plt.ylabel("Density")
-            plt.legend()
-
-        plt.tight_layout()
-        plt.show()
-    
-    # ------------------ 9. Trả về dữ liệu sau khi tiền xử lý ------------------ #
+    # ------------------ 7. Trả về dữ liệu sau khi tiền xử lý ------------------ #
     def get_processed_data(self):
         return self.data
     
