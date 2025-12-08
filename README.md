@@ -95,7 +95,7 @@ pipe.evaluate(encoders=encoders)
 ```python
 # Chọn mô hình tốt nhất
 best_model = pipe.select_best_model()
-best_model = pipe.select_best_model(method="grid)
+best_model = pipe.select_best_model(method="grid")
 
 # Tối ưu tham số
 pipe.optimize_params()
