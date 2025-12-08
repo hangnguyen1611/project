@@ -35,6 +35,7 @@ class ModelTrainPipeline:
         np.random.seed(self.random_seed)
         random.seed(self.random_seed)
 
+    # ------------------ 1. Load dữ liệu ------------------ #
     def load_data(self, data=None, target=None):
         """
         Nạp dữ liệu đã xử lý.
@@ -66,7 +67,7 @@ class ModelTrainPipeline:
 
         return self
     
-    # ------------------2. Chia tập dữ liệu------------------ #
+    # ------------------ 2. Chia tập dữ liệu ------------------ #
     def split_data(self, test_size=0.2, stratify=True):
         """
         Chia tập dữ liệu thành train/test.
@@ -161,7 +162,8 @@ class ModelTrainPipeline:
         evaluator = EvaluateModel(self.X_test, self.y_test, self.model)
         evaluator.plot_confusion_matrix(encoders=encoders, target=self.target)
         return evaluator.evaluate()
-    
+
+    # ------------------ 7. Giải thích mô hình ------------------ #
     def explain(self):
         """
         Khởi tạo SHAPExplainer.
