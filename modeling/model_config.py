@@ -138,8 +138,7 @@ LIGHTGBM_CONFIG = ModelConfig(
         'max_depth': [-1, 10],
         'learning_rate': [0.01, 0.05],
         'subsample': [0.7, 0.9],
-        'colsample_bytree': [0.7, 1.0],
-        'bagging_freq': [1]
+        'colsample_bytree': [0.7, 1.0]
     }
 )
 
