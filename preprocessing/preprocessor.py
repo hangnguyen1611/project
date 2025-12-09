@@ -40,9 +40,19 @@ class DataPreprocessor:
         else:
             current_file_path = Path(__file__)
             file_path = current_file_path.parent.parent / 'data' / input_path
-            
+
+        ext = file_path.suffix.lower()
+
         try:
-            df = pd.read_csv(file_path)
+            if ext == '.csv':
+                df = pd.read_csv(file_path)
+            elif ext == '.json':
+                df = pd.read_json(file_path)
+            elif ext == '.xlsx':
+                df = pd.read_excel(file_path)
+            else:
+                print(f"Không đọc file dạng '{ext}'")
+                return None
             return cls(df) 
         except Exception as e:
             print("Lỗi khi đọc file:", e)
