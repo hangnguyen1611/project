@@ -50,7 +50,7 @@ def rf_param_space(trial, n_classes, y, seed):
     }
 
 RANDOM_FOREST_CONFIG = ModelConfig(
-    name="random_forest",
+    name="randomforest",
     model_cls=RandomForestClassifier,
     param_space=rf_param_space,
     param_grid={

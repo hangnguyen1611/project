@@ -15,7 +15,7 @@ optuna.logging.set_verbosity(optuna.logging.WARNING)
 
 class OptunaTuner:
     """
-    Tối ưu tham số bằng Optuan
+    Tối ưu tham số bằng Optuna.
     """
     def __init__(self, X, y, seed=42):
         self.X = X

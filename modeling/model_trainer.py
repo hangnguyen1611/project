@@ -19,14 +19,14 @@ class ModelTrainer:
         - Huấn luyện model đã được tune (Grid / Optuna).
     """
 
-    def __init__(self, model=None, model_name: Optional[str] = None, seed: int = 42):
+    def __init__(self, model=None, model_name = None, seed = 42):
         if model is None and model_name is None:
             raise ValueError("Phải truyền model hoặc model_name")
 
         self.random_seed = seed
         self.model = model or self._build_baseline_model(model_name)
 
-    def _build_baseline_model(self, name: str):
+    def _build_baseline_model(self, name):
         """
         Tạo baseline model.
 

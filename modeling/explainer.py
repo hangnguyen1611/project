@@ -6,7 +6,10 @@ import warnings
 
 class SHAPExplainer:
     """
-    Giải thích mô hình với SHAP.
+    Giải thích mô hình với SHAP bằng các đồ thị SHAP bao gồm:
+        - beeswarm plot
+        - dependence plot
+        - force plot cho mẫu cụ thể
     """
     def __init__(self, model, X_train, X_test, encoders=None, scaler=None, num_cols=None):
         self.model = model
@@ -39,7 +42,12 @@ class SHAPExplainer:
 
     def _select_class(self, sample_index=0):
         """
-        Chọn lớp cho mẫu (sample_index).
+        Chọn lớp cho mẫu.
+
+        Tham số đầu vào:
+            - sample_index: chỉ số mẫu
+        
+        Trả về lớp của mẫu nếu có.
         """
         if hasattr(self.model, "predict_proba"):
             return np.argmax(
@@ -49,7 +57,16 @@ class SHAPExplainer:
 
     def _get_shap(self, sample_index=0):
         """
-        Getter SHAP cho mẫu (sample_index).
+        Lấy SHAP value và base value cho mẫu.
+
+        Tham số đầu vào:
+            - sample_index: chỉ số mẫu cần lấy SHAP value.
+        
+        Trả về SHAP value và base value.
+
+        Ghi chú:
+            - Với multiclass, phương thức sẽ chọn class trả về SHAP value.
+            - Base value là giá trị trung bình dự đoán trước khi biết dữ liệu.
         """
         sv = self.shap_values
 
@@ -66,6 +83,11 @@ class SHAPExplainer:
     def inverse_row(self, row):
         """
         Lấy lại dữ liệu gốc cho 1 hàng.
+
+        Tham số đầu vào:
+            - row: hàng dữ liệu đã mã hóa và chuẩn hóa.
+        
+        Trả về dữ liệu ban đầu cho hàng đó.
         """
         row_disp = row.copy()
 
@@ -105,14 +127,15 @@ class SHAPExplainer:
 
         return row_disp
 
-    def beeswarm(self, max_display=20):
+    def beeswarm(self, max_display=20, sample_index=0):
         """
         Vẽ SHAP beeswarm.
 
         Tham số đầu vào:
+            - sample_index: chỉ số mẫu để vẽ cho class nếu là multiclass.
             - max_display: số feature tối đa muốn hiển thị.
         """
-        shap_vals, base = self._get_shap()
+        shap_vals, base = self._get_shap(sample_index=sample_index)
 
         shap.plots.beeswarm(
             shap.Explanation(
@@ -124,14 +147,15 @@ class SHAPExplainer:
             max_display=max_display
         )
 
-    def dependence(self, ncol=3):
+    def dependence(self, sample_index=0, ncol=3):
         """
         Vẽ SHAP dependence plot.
 
         Tham số đầu vào:
+            - sample_index: chỉ số mẫu để vẽ cho class nếu là multiclass.
             - ncol: số cột trong figure.
         """
-        shap_vals, _ = self._get_shap()
+        shap_vals, _ = self._get_shap(sample_index=sample_index)
         features = self.X_test.columns
 
         n = len(features)
@@ -167,7 +191,10 @@ class SHAPExplainer:
 
     def force(self, sample_index=0):
         """
-        Vẽ SHAP force plot cho một mẫu xác định (sample_index).
+        Vẽ SHAP force plot cho một mẫu xác định.
+
+        Tham số đầu vào:
+            - sample_index: Chỉ số mẫu.
         """
         shap_vals, base = self._get_shap(sample_index)
         sample_shap = shap_vals[sample_index]

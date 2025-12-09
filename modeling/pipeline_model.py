@@ -222,17 +222,17 @@ class ModelTrainPipeline:
 
         return self.shap_explainer
     
-    def shap_beeswarm(self):
+    def shap_beeswarm(self, sample_index=0):
         """
         Vẽ SHAP beeswarm.
         """
-        return self.explain().beeswarm()
+        return self.explain().beeswarm(sample_index=sample_index)
 
-    def shap_dependence(self):
+    def shap_dependence(self, sample_index=0):
         """
         Vẽ SHAP dependence plot.
         """
-        return self.explain().dependence()
+        return self.explain().dependence(sample_index=sample_index)
 
     def shap_force(self, sample_index=0):
         """
