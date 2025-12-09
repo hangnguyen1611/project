@@ -10,7 +10,7 @@
 | Cột | Mô tả |
 |:----|:------|
 | **age** | Độ tuổi |
-| **gender** | Giới tính ( Male - nam,  Female - nữ) |
+| **gender** | Giới tính (Male - nam,  Female - nữ) |
 | **employment_status** | Tình trạng việc làm |
 | **work_environment** | Môi trường làm việc |                  
 | **mental_health_history** | Có lịch sử mắc vấn đề về sức khỏe tinh thần |          
@@ -20,7 +20,7 @@
 | **physical_activity_days** | Số ngày vận động mỗi tuần |
 | **depression_score** | Điểm đo lường triệu chứng trầm cảm |                  
 | **anxiety_score** | Điểm đo lường độ mức lo âu |  
-| **social_support_score** | Điểm đánh giá mức độ hỗ trợ xã hội(gia đình, bạn bè,...) |  
+| **social_support_score** | Điểm đánh giá mức độ hỗ trợ xã hội (gia đình, bạn bè,...) |  
 | **productivity_score** | Đánh giá năng suất làm việc |  
 | **mental_health_risk** | Nguy cơ sức khỏe tinh thần|  
 

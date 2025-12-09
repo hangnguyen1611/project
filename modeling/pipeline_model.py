@@ -3,6 +3,7 @@ import joblib
 import numpy as np
 import logging
 import random
+from datetime import datetime
 from pathlib import Path
 from sklearn.model_selection import train_test_split
 
@@ -155,13 +156,51 @@ class ModelTrainPipeline:
         return results
 
     # ------------------ 6. Đánh giá mô hình ------------------ #
+    @staticmethod
+    def save_experiment_results(model=None, metrics_df=None, output_path_str: str = "modeling"):
+        """
+        Lưu kết quả đánh giá mô hình.
+
+        Tham số đầu vào:
+            - model: mô hình.
+            - metrics_df: các chỉ số đánh giá (DataFrame).
+            - output_path_str: path lưu file/tên file.
+        """
+        model_name = model.__class__.__name__
+        df = metrics_df.copy()
+        df["model_name"] = model_name
+        df["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        base_dir = Path(__file__).parent.parent / "modeling"
+        output_path = Path(output_path_str)
+
+        if output_path.suffix == "":
+            file_name = f"{model_name}_results.csv"
+        else:
+            file_name = output_path.name
+
+        file_path = base_dir / file_name
+
+        df.to_csv(file_path, mode="a", header=not Path(file_path).exists(), index=False)
+
     def evaluate(self, encoders=None):
         """
-        Đánh giá mô hình.
+        Đánh giá mô hình và lưu lại kết quả.
+
+        Tham số đầu vào:
+            - encoders: Dict encoder dùng inverse target để hiển thị.
+
+        Trả về kết quả đánh giá.
         """
         evaluator = EvaluateModel(self.X_test, self.y_test, self.model)
         evaluator.plot_confusion_matrix(encoders=encoders, target=self.target)
-        return evaluator.evaluate()
+
+        results = evaluator.evaluate()
+
+        # Lưu kết quả
+        self.save_experiment_results(model=self.model, metrics_df=results)
+
+        return results
 
     # ------------------ 7. Giải thích mô hình ------------------ #
     def explain(self):
