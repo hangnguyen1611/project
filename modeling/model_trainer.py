@@ -35,8 +35,6 @@ class ModelTrainer:
 
         Trả về mô hình đã build baseline.
         """
-        logging.info(f"Building baseline model: {name}")
-
         model_map = {
             "logistic": LogisticRegression(
                 max_iter=1000,
@@ -72,7 +70,8 @@ class ModelTrainer:
         Trả về mô hình đã fit.
         """
         model_name = self.model.__class__.__name__
-        logger.info(f"Training {model_name}")
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
+        logger.info(f"[ModelTrainer] Bắt đầu huấn luyện mô hình: {model_name}")
 
         fit_params = {}
 
@@ -86,5 +85,6 @@ class ModelTrainer:
         with open(os.devnull, "w") as f, contextlib.redirect_stdout(f), contextlib.redirect_stderr(f):
             self.model.fit(X_train, y_train, **fit_params)
 
-        logger.info(f"{model_name} trained successfully")
+        logger.info(f"[ModelTrainer] Hoàn thành huấn luyện mô hình: {model_name}")
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
         return self.model

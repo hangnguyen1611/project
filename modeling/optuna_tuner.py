@@ -65,12 +65,16 @@ class OptunaTuner:
 
         Trả về: mô hình đã fit với tham số tối ưu.
         """
-        logger.info("Tối ưu tham số với Optuna...")
-
         scoring = scoring or ("roc_auc" if self.n_classes == 2 else "f1")
 
         if isinstance(model_config, str):
             model_config = MODEL_REGISTRY[model_config]
+
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
+        logger.info(f"[Optuna] Bắt đầu tối ưu tham số cho mô hình: {model_config.name}")
+        logger.info(f"[Optuna] Scoring: {scoring}")
+        logger.info(f"[Optuna] Số trial: {n_trials}, CV folds: {cv}")
+        logger.info(f"[Optuna] Số lớp: {self.n_classes}")
 
         def objective(trial):
             params = model_config.param_space(trial, self.n_classes, self.y, self.seed)
@@ -110,7 +114,7 @@ class OptunaTuner:
 
                 scores.append(score)
             mean_score = float(np.mean(scores))
-            logger.info(f"Trial {trial.number} - params: {params} - mean_score: {mean_score}")
+            logger.info(f"[Optuna] Trial {trial.number} params: {params} - mean_score: {mean_score}")
 
             return mean_score
 
@@ -126,7 +130,9 @@ class OptunaTuner:
         best_params = study.best_trial.params
         best_params.update({"random_state": self.seed})
 
-        logger.info(f"Best params: {best_params}")
+        logger.info(f"[Optuna] Best Params: {best_params}")
+        logger.info(f"[Optuna] Best CV Score: {study.best_value:.4f}")
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
 
         best_model = model_config.model_cls(**best_params)
         best_model.fit(self.X, self.y)

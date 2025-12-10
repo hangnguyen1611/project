@@ -64,11 +64,15 @@ class GridTuner:
 
         Trả về mô hình với tham số đã tối ưu.
         """
-        logging.info("Tối ưu tham số với GridSearch...")
         if isinstance(model_config, str):
             model_config = MODEL_REGISTRY[model_config]
 
         scoring = scoring or ("roc_auc" if self.n_classes == 2 else "f1")
+
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
+        logger.info(f"[GridSearch] Bắt đầu tối ưu tham số mô hình: {model_config.name}")
+        logger.info(f"[GridSearch] Scoring: {scoring}")
+        logger.info(f"[GridSearch] CV folds: {cv}")
 
         skf = StratifiedKFold(n_splits=cv, shuffle=True, random_state=self.seed)
 
@@ -89,5 +93,15 @@ class GridTuner:
         with open(os.devnull, "w") as f, contextlib.redirect_stdout(f), contextlib.redirect_stderr(f):
             grid.fit(self.X, self.y)
 
-        logger.info(f"Best params: {grid.best_params_}, best CV score: {grid.best_score_:.4f}")
+        # Logging chi tiết kết quả từng tổ hợp
+        logger.info("Kết quả từng combination:")
+        for i, params in enumerate(grid.cv_results_['params']):
+            mean_score = grid.cv_results_['mean_test_score'][i]
+            logger.info(f"[GridSearch] Trial {i+1}: score={mean_score:.4f}, params={params}")
+
+        # Best result
+        logger.info(f"[GridSearch] Best Params: {grid.best_params_}")
+        logger.info(f"[GridSearch] Best CV Score: {grid.best_score_:.4f}")
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
+
         return grid.best_estimator_

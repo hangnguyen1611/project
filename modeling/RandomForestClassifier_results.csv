@@ -1,0 +1,2 @@
+accuracy,precision,recall,f1,roc_auc_ovr,model_name,timestamp
+0.9725,0.9772499452941528,0.9621901429204162,0.9693771772816123,0.9987443709449599,RandomForestClassifier,2025-12-10 22:00:46

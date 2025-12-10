@@ -34,10 +34,14 @@ class BestModelSelector:
             - best_model: model tốt nhất đã tối ưu tham số.
             - all_metrics: chỉ số đánh giá cho tất cả các mô hình.
         """
-        logger.info("Chọn mô hình tốt nhất...")
-
         n_classes = self.y_train.nunique()
         scoring = self.scoring or ("roc_auc" if n_classes == 2 else "f1")
+
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
+        logger.info("[BestModelSelector] Bắt đầu chọn mô hình tốt nhất...")
+        logger.info(f"[BestModelSelector] Số lớp: {n_classes}")
+        logger.info(f"[BestModelSelector] Phương pháp tối ưu tham số: {self.method}")
+        logger.info(f"[BestModelSelector] Chỉ số đánh giá: {scoring}")
 
         results = []
         best_score = -np.inf
@@ -45,7 +49,7 @@ class BestModelSelector:
         best_name = None
 
         for name, cfg in MODEL_REGISTRY.items():
-            logger.info(f"Training {name}...")
+            logger.info(f"[BestModelSelector] Đánh giá mô hình: {name}...")
 
             trainer = ModelTrainer(model_name=name, seed=self.random_seed)
             model = trainer.fit(self.X_train, self.y_train, self.X_test, self.y_test)
@@ -77,8 +81,8 @@ class BestModelSelector:
                 best_model = model
                 best_name = name
 
-        logger.info(f"Mô hình được chọn: {best_name}, score = {best_score:.4f}")
-        logger.info(f"Tối ưu tham số cho {best_name}...")
+        logger.info(f"[BestModelSelector] Best model trước tối ưu tham số: {best_name} với {scoring}: {best_score:.4f}")
+        logger.info(f"[BestModelSelector] Tối ưu tham số cho {best_name} với {self.method}...")
 
         if self.method == "grid":
             tuner = GridTuner(self.X_train, self.y_train, seed=self.random_seed)
@@ -91,7 +95,9 @@ class BestModelSelector:
         cols = ["model_name"] + [c for c in all_metrics.columns if c != "model_name"]
         all_metrics = all_metrics[cols]
 
-        logger.info(f"Best model: {best_name} with optimized params.")
+        logger.info(f"[BestModelSelector] Hoàn thành chọn mô hình tốt nhất: {best_name}")
+        logger.info("────────────────────────────────────────────────────────────────────────────────────────────")
+
         return {
             "best_model_name": best_name,
             "best_model": best_model,

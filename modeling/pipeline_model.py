@@ -106,7 +106,7 @@ class ModelTrainPipeline:
         self.model = trainer.fit(self.X_train, self.y_train, self.X_test, self.y_test)
         self.shap_explainer = None
 
-        return self
+        return self.model
 
     # ------------------ 4. Tối ưu tham số ------------------ #
     def optimize_params(self, model_name, method="optuna", **kwargs):
@@ -117,8 +117,6 @@ class ModelTrainPipeline:
             - model_name: tên model muốn tối ưu tham số.
             - method: cách tối ưu (dùng grid search hoặc optuna).
         """
-        logger.info(f"Tuning {model_name} with {method}")
-
         if method == "grid":
             tuner = GridTuner(self.X_train, self.y_train)
             self.model = tuner.optimize(model_name, **kwargs)
@@ -201,6 +199,14 @@ class ModelTrainPipeline:
         self.save_experiment_results(model=self.model, metrics_df=results)
 
         return results
+    
+    def comparison_plot(self, model_metrics, y_lim=(0.95, 1)):
+        """
+        Vẽ các biểu đồ so sánh giữa các mô hình.
+        """
+        evaluator = EvaluateModel(self.X_test, self.y_test, self.model)
+        evaluator.comparison_bar_plot(model_metrics=model_metrics)
+        evaluator.radar_plot(model_metrics=model_metrics, y_lim=y_lim)
 
     # ------------------ 7. Giải thích mô hình ------------------ #
     def explain(self):
@@ -269,6 +275,5 @@ class ModelTrainPipeline:
         else:
             current_file_path = Path(__file__)
             file_path = current_file_path.parent.parent / 'modeling' / input_path
-        joblib.dump(self.model, file_path)
         self.model = joblib.load(file_path)
         return self.model
