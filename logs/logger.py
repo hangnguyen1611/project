@@ -1,7 +1,7 @@
 import logging
 from pathlib import Path
 
-LOG_FILE = "../logs/train_model.log"
+LOG_FILE = Path(__file__).parent / "train_model.log"
 
 def setup_logger(level=logging.INFO):
     Path(LOG_FILE).parent.mkdir(parents=True, exist_ok=True)
@@ -11,7 +11,6 @@ def setup_logger(level=logging.INFO):
 
     # Xóa tất cả StreamHandler
     root_logger.handlers = [h for h in root_logger.handlers if not isinstance(h, logging.StreamHandler)]
-
 
     # Thêm FileHandler
     if not any(isinstance(h, logging.FileHandler) for h in root_logger.handlers):

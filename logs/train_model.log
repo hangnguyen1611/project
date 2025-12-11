@@ -1,346 +1,434 @@
-2025-12-10 22:00:44,963 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:00:44,964 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LogisticRegression
-2025-12-10 22:00:45,019 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LogisticRegression
-2025-12-10 22:00:45,019 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:00:45,113 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:00:45,113 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LogisticRegression...
-2025-12-10 22:00:45,124 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9995, 'precision': 0.999298245614035, 'recall': 0.9997170345217884, 'f1': 0.9995072102567085, 'roc_auc_ovr': 0.999997817963355}
-2025-12-10 22:00:45,124 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:00:45,474 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:00:45,475 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: RandomForestClassifier
-2025-12-10 22:00:45,707 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: RandomForestClassifier
-2025-12-10 22:00:45,707 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:00:45,835 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:00:45,835 - INFO - [Evaluate] Bắt đầu đánh giá mô hình RandomForestClassifier...
-2025-12-10 22:00:46,131 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9725, 'precision': 0.9772499452941528, 'recall': 0.9621901429204162, 'f1': 0.9693771772816123, 'roc_auc_ovr': 0.9987443709449599}
-2025-12-10 22:00:46,131 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:15,870 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:15,870 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LGBMClassifier
-2025-12-10 22:01:18,923 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LGBMClassifier
-2025-12-10 22:01:18,924 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:19,091 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:19,091 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
-2025-12-10 22:01:19,127 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:01:19,127 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:20,063 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:20,064 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: XGBClassifier
-2025-12-10 22:01:20,376 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: XGBClassifier
-2025-12-10 22:01:20,376 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:20,518 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:20,518 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
-2025-12-10 22:01:20,543 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:01:20,543 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,342 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,342 - INFO - [BestModelSelector] Bắt đầu chọn mô hình tốt nhất...
-2025-12-10 22:01:21,342 - INFO - [BestModelSelector] Số lớp: 3
-2025-12-10 22:01:21,342 - INFO - [BestModelSelector] Phương pháp tối ưu tham số: optuna
-2025-12-10 22:01:21,342 - INFO - [BestModelSelector] Chỉ số đánh giá: f1
-2025-12-10 22:01:21,342 - INFO - [BestModelSelector] Đánh giá mô hình: logistic...
-2025-12-10 22:01:21,342 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,342 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LogisticRegression
-2025-12-10 22:01:21,411 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LogisticRegression
-2025-12-10 22:01:21,411 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,411 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,411 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LogisticRegression...
-2025-12-10 22:01:21,424 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9995, 'precision': 0.999298245614035, 'recall': 0.9997170345217884, 'f1': 0.9995072102567085, 'roc_auc_ovr': 0.999997817963355}
-2025-12-10 22:01:21,425 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,425 - INFO - logistic f1: 0.9995
-2025-12-10 22:01:21,425 - INFO - [BestModelSelector] Đánh giá mô hình: randomforest...
-2025-12-10 22:01:21,425 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,425 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: RandomForestClassifier
-2025-12-10 22:01:21,635 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: RandomForestClassifier
-2025-12-10 22:01:21,635 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,635 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,635 - INFO - [Evaluate] Bắt đầu đánh giá mô hình RandomForestClassifier...
-2025-12-10 22:01:21,705 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9725, 'precision': 0.9772499452941528, 'recall': 0.9621901429204162, 'f1': 0.9693771772816123, 'roc_auc_ovr': 0.9987443709449599}
-2025-12-10 22:01:21,705 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,705 - INFO - randomforest f1: 0.9694
-2025-12-10 22:01:21,705 - INFO - [BestModelSelector] Đánh giá mô hình: xgboost...
-2025-12-10 22:01:21,705 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,705 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: XGBClassifier
-2025-12-10 22:01:21,955 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: XGBClassifier
-2025-12-10 22:01:21,955 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,958 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,958 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
-2025-12-10 22:01:21,976 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:01:21,981 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,983 - INFO - xgboost f1: 1.0000
-2025-12-10 22:01:21,983 - INFO - [BestModelSelector] Đánh giá mô hình: lightgbm...
-2025-12-10 22:01:21,983 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:21,983 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LGBMClassifier
-2025-12-10 22:01:22,274 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LGBMClassifier
-2025-12-10 22:01:22,274 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:22,274 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:22,275 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
-2025-12-10 22:01:22,302 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:01:22,302 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:22,303 - INFO - lightgbm f1: 1.0000
-2025-12-10 22:01:22,303 - INFO - [BestModelSelector] Best model trước tối ưu tham số: xgboost với f1: 1.0000
-2025-12-10 22:01:22,303 - INFO - [BestModelSelector] Tối ưu tham số cho xgboost với optuna...
-2025-12-10 22:01:22,303 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:22,303 - INFO - [Optuna] Bắt đầu tối ưu tham số cho mô hình: xgboost
-2025-12-10 22:01:22,303 - INFO - [Optuna] Scoring: f1
-2025-12-10 22:01:22,303 - INFO - [Optuna] Số trial: 30, CV folds: 3
-2025-12-10 22:01:22,303 - INFO - [Optuna] Số lớp: 3
-2025-12-10 22:01:23,667 - INFO - [Optuna] Trial 0 params: {'n_estimators': 150, 'learning_rate': 0.1540359659501924, 'max_depth': 7, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9952034261311343
-2025-12-10 22:01:25,039 - INFO - [Optuna] Trial 1 params: {'n_estimators': 100, 'learning_rate': 0.001360354613611808, 'max_depth': 8, 'subsample': 0.8404460046972835, 'colsample_bytree': 0.8540362888980227, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9916266890571572
-2025-12-10 22:01:25,950 - INFO - [Optuna] Trial 2 params: {'n_estimators': 100, 'learning_rate': 0.17052641538983093, 'max_depth': 7, 'subsample': 0.6849356442713105, 'colsample_bytree': 0.5909124836035503, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9942731748900782
-2025-12-10 22:01:26,886 - INFO - [Optuna] Trial 3 params: {'n_estimators': 100, 'learning_rate': 0.005012686302434875, 'max_depth': 6, 'subsample': 0.7727780074568463, 'colsample_bytree': 0.645614570099021, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9632458396604054
-2025-12-10 22:01:28,519 - INFO - [Optuna] Trial 4 params: {'n_estimators': 250, 'learning_rate': 0.002094013887393744, 'max_depth': 4, 'subsample': 0.7465447373174767, 'colsample_bytree': 0.728034992108518, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9387940281942978
-2025-12-10 22:01:32,527 - INFO - [Optuna] Trial 10 params: {'n_estimators': 150, 'learning_rate': 0.14013397578557643, 'max_depth': 8, 'subsample': 0.6071847502459279, 'colsample_bytree': 0.5076838686640521, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9933746865412868
-2025-12-10 22:01:33,672 - INFO - [Optuna] Trial 11 params: {'n_estimators': 150, 'learning_rate': 0.18680462820461602, 'max_depth': 7, 'subsample': 0.6719331269140577, 'colsample_bytree': 0.8218563683119118, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9971914725217547
-2025-12-10 22:01:35,030 - INFO - [Optuna] Trial 12 params: {'n_estimators': 150, 'learning_rate': 0.060946846664015675, 'max_depth': 7, 'subsample': 0.6861163483524778, 'colsample_bytree': 0.8339538705408651, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980551654957495
-2025-12-10 22:01:36,471 - INFO - [Optuna] Trial 13 params: {'n_estimators': 150, 'learning_rate': 0.05047558492134032, 'max_depth': 7, 'subsample': 0.6609562456023955, 'colsample_bytree': 0.8418107582650314, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981785852474537
-2025-12-10 22:01:37,968 - INFO - [Optuna] Trial 14 params: {'n_estimators': 200, 'learning_rate': 0.049937519849628964, 'max_depth': 5, 'subsample': 0.6209434239245378, 'colsample_bytree': 0.9015019989115804, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980557246231178
-2025-12-10 22:01:39,494 - INFO - [Optuna] Trial 15 params: {'n_estimators': 200, 'learning_rate': 0.03902041227436321, 'max_depth': 5, 'subsample': 0.6192731778108003, 'colsample_bytree': 0.960347899457147, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984258881837591
-2025-12-10 22:01:41,016 - INFO - [Optuna] Trial 16 params: {'n_estimators': 200, 'learning_rate': 0.03136735010082351, 'max_depth': 5, 'subsample': 0.7291444537057288, 'colsample_bytree': 0.9983899997392717, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983030267067807
-2025-12-10 22:01:42,520 - INFO - [Optuna] Trial 17 params: {'n_estimators': 200, 'learning_rate': 0.01988261877555727, 'max_depth': 5, 'subsample': 0.7302280377070337, 'colsample_bytree': 0.9980084946806067, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980566093998612
-2025-12-10 22:01:44,944 - INFO - [Optuna] Trial 20 params: {'n_estimators': 200, 'learning_rate': 0.08074708704115686, 'max_depth': 5, 'subsample': 0.646969204078556, 'colsample_bytree': 0.953286131001336, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998179514203894
-2025-12-10 22:01:46,352 - INFO - [Optuna] Trial 21 params: {'n_estimators': 200, 'learning_rate': 0.08546829525130939, 'max_depth': 5, 'subsample': 0.6405321213255016, 'colsample_bytree': 0.9679606782372898, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9979330965861243
-2025-12-10 22:01:49,318 - INFO - [Optuna] Trial 25 params: {'n_estimators': 200, 'learning_rate': 0.09092913101293477, 'max_depth': 6, 'subsample': 0.7668002402591811, 'colsample_bytree': 0.8888030765280213, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981785121458225
-2025-12-10 22:01:51,490 - INFO - [Optuna] Trial 27 params: {'n_estimators': 250, 'learning_rate': 0.03916181126724674, 'max_depth': 5, 'subsample': 0.6428601662152831, 'colsample_bytree': 0.9341135021231856, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984253521996522
-2025-12-10 22:01:53,910 - INFO - [Optuna] Trial 28 params: {'n_estimators': 300, 'learning_rate': 0.035157340238680924, 'max_depth': 6, 'subsample': 0.6010884550142419, 'colsample_bytree': 0.925229344657053, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983017941541824
-2025-12-10 22:01:54,433 - INFO - [Optuna] Best Params: {'n_estimators': 200, 'learning_rate': 0.03902041227436321, 'max_depth': 5, 'subsample': 0.6192731778108003, 'colsample_bytree': 0.960347899457147, 'random_state': 42}
-2025-12-10 22:01:54,433 - INFO - [Optuna] Best CV Score: 0.9984
-2025-12-10 22:01:54,433 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:54,796 - INFO - [BestModelSelector] Hoàn thành chọn mô hình tốt nhất: xgboost
-2025-12-10 22:01:54,796 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:54,942 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:54,942 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
-2025-12-10 22:01:54,959 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:01:54,959 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:57,439 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:01:57,439 - INFO - [Optuna] Bắt đầu tối ưu tham số cho mô hình: lightgbm
-2025-12-10 22:01:57,439 - INFO - [Optuna] Scoring: f1
-2025-12-10 22:01:57,439 - INFO - [Optuna] Số trial: 30, CV folds: 3
-2025-12-10 22:01:57,439 - INFO - [Optuna] Số lớp: 3
-2025-12-10 22:01:58,705 - INFO - [Optuna] Trial 0 params: {'n_estimators': 425, 'learning_rate': 0.1540359659501924, 'num_leaves': 98, 'max_depth': 9, 'min_child_samples': 26, 'min_split_gain': 0.07080725777960455, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9989495888309445
-2025-12-10 22:01:59,470 - INFO - [Optuna] Trial 1 params: {'n_estimators': 212, 'learning_rate': 0.17052641538983093, 'num_leaves': 110, 'max_depth': 9, 'min_child_samples': 20, 'min_split_gain': 0.029122914019804193, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9993836039521907
-2025-12-10 22:02:03,490 - INFO - [Optuna] Trial 2 params: {'n_estimators': 567, 'learning_rate': 0.002094013887393744, 'num_leaves': 49, 'max_depth': 5, 'min_child_samples': 26, 'min_split_gain': 0.0046450412719997725, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9815530872825445
-2025-12-10 22:02:06,176 - INFO - [Optuna] Trial 3 params: {'n_estimators': 565, 'learning_rate': 0.002468204407989012, 'num_leaves': 23, 'max_depth': 3, 'min_child_samples': 29, 'min_split_gain': 0.04401524937396013, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9518332480343835
-2025-12-10 22:02:08,121 - INFO - [Optuna] Trial 4 params: {'n_estimators': 273, 'learning_rate': 0.013785322267847979, 'num_leaves': 19, 'max_depth': -1, 'min_child_samples': 24, 'min_split_gain': 0.018485445552552705, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9986712609409626
-2025-12-10 22:02:10,677 - INFO - [Optuna] Trial 5 params: {'n_estimators': 782, 'learning_rate': 0.06075805702761636, 'num_leaves': 122, 'max_depth': 5, 'min_child_samples': 6, 'min_split_gain': 0.032533033076326434, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9992606276846757
-2025-12-10 22:02:16,656 - INFO - [Optuna] Trial 8 params: {'n_estimators': 718, 'learning_rate': 0.027178637804725722, 'num_leaves': 53, 'max_depth': 7, 'min_child_samples': 36, 'min_split_gain': 0.04722149251619493, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9991963125087725
-2025-12-10 22:02:17,754 - INFO - [Optuna] Trial 10 params: {'n_estimators': 212, 'learning_rate': 0.1400250848362196, 'num_leaves': 81, 'max_depth': 9, 'min_child_samples': 16, 'min_split_gain': 0.06902470735691452, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9993836039521907
-2025-12-10 22:02:18,413 - INFO - [Optuna] Trial 11 params: {'n_estimators': 205, 'learning_rate': 0.18630877681457703, 'num_leaves': 80, 'max_depth': 9, 'min_child_samples': 16, 'min_split_gain': 0.0707545630928997, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9991366016165943
-2025-12-10 22:02:19,506 - INFO - [Optuna] Trial 12 params: {'n_estimators': 339, 'learning_rate': 0.09230801534212475, 'num_leaves': 85, 'max_depth': 9, 'min_child_samples': 17, 'min_split_gain': 0.06935547910049335, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995069297231431
-2025-12-10 22:02:20,681 - INFO - [Optuna] Trial 13 params: {'n_estimators': 360, 'learning_rate': 0.07004029239693715, 'num_leaves': 125, 'max_depth': 9, 'min_child_samples': 13, 'min_split_gain': 0.0880030607579906, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9991366016165943
-2025-12-10 22:02:23,241 - INFO - [Optuna] Trial 14 params: {'n_estimators': 337, 'learning_rate': 0.012340668299959473, 'num_leaves': 66, 'max_depth': 7, 'min_child_samples': 20, 'min_split_gain': 0.03329081437563814, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.99907298673782
-2025-12-10 22:02:24,389 - INFO - [Optuna] Trial 15 params: {'n_estimators': 334, 'learning_rate': 0.081997382684717, 'num_leaves': 92, 'max_depth': 9, 'min_child_samples': 33, 'min_split_gain': 0.06254529008796238, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9992601613675506
-2025-12-10 22:02:29,187 - INFO - [Optuna] Trial 17 params: {'n_estimators': 491, 'learning_rate': 0.007688164947878135, 'num_leaves': 66, 'max_depth': 9, 'min_child_samples': 22, 'min_split_gain': 0.056486991182545805, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.99907298673782
-2025-12-10 22:02:32,298 - INFO - [Optuna] Trial 20 params: {'n_estimators': 261, 'learning_rate': 0.03620991374395948, 'num_leaves': 51, 'max_depth': 7, 'min_child_samples': 20, 'min_split_gain': 0.05442385367607053, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9993836039521907
-2025-12-10 22:02:33,017 - INFO - [Optuna] Trial 21 params: {'n_estimators': 216, 'learning_rate': 0.1259359493384057, 'num_leaves': 77, 'max_depth': 9, 'min_child_samples': 17, 'min_split_gain': 0.06908969024182691, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9991366016165943
-2025-12-10 22:02:33,664 - INFO - [Optuna] Trial 22 params: {'n_estimators': 205, 'learning_rate': 0.1663523638123232, 'num_leaves': 83, 'max_depth': 9, 'min_child_samples': 13, 'min_split_gain': 0.08015957298397522, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9993836039521907
-2025-12-10 22:02:34,983 - INFO - [Optuna] Trial 23 params: {'n_estimators': 326, 'learning_rate': 0.05557625235587537, 'num_leaves': 95, 'max_depth': 9, 'min_child_samples': 20, 'min_split_gain': 0.062296660934845025, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9992601613675506
-2025-12-10 22:02:35,812 - INFO - [Optuna] Trial 24 params: {'n_estimators': 256, 'learning_rate': 0.10354000078228756, 'num_leaves': 66, 'max_depth': 9, 'min_child_samples': 15, 'min_split_gain': 0.09277986959533413, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9992598108082656
-2025-12-10 22:02:39,134 - INFO - [Optuna] Trial 27 params: {'n_estimators': 494, 'learning_rate': 0.03113822748280168, 'num_leaves': 73, 'max_depth': 9, 'min_child_samples': 19, 'min_split_gain': 0.061641711042339016, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995069297231431
-2025-12-10 22:02:42,263 - INFO - [Optuna] Trial 28 params: {'n_estimators': 526, 'learning_rate': 0.02360937157891037, 'num_leaves': 34, 'max_depth': 9, 'min_child_samples': 19, 'min_split_gain': 0.038447102205244804, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995069297231431
-2025-12-10 22:02:44,170 - INFO - [Optuna] Best Params: {'n_estimators': 339, 'learning_rate': 0.09230801534212475, 'num_leaves': 85, 'max_depth': 9, 'min_child_samples': 17, 'min_split_gain': 0.06935547910049335, 'random_state': 42}
-2025-12-10 22:02:44,172 - INFO - [Optuna] Best CV Score: 0.9995
-2025-12-10 22:02:44,172 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:44,675 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:44,676 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
-2025-12-10 22:02:44,693 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:02:44,693 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,166 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,166 - INFO - [BestModelSelector] Bắt đầu chọn mô hình tốt nhất...
-2025-12-10 22:02:47,166 - INFO - [BestModelSelector] Số lớp: 3
-2025-12-10 22:02:47,166 - INFO - [BestModelSelector] Phương pháp tối ưu tham số: grid
-2025-12-10 22:02:47,167 - INFO - [BestModelSelector] Chỉ số đánh giá: f1
-2025-12-10 22:02:47,167 - INFO - [BestModelSelector] Đánh giá mô hình: logistic...
-2025-12-10 22:02:47,167 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,167 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LogisticRegression
-2025-12-10 22:02:47,230 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LogisticRegression
-2025-12-10 22:02:47,230 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,231 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,231 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LogisticRegression...
-2025-12-10 22:02:47,241 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9995, 'precision': 0.999298245614035, 'recall': 0.9997170345217884, 'f1': 0.9995072102567085, 'roc_auc_ovr': 0.999997817963355}
-2025-12-10 22:02:47,241 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,242 - INFO - logistic f1: 0.9995
-2025-12-10 22:02:47,242 - INFO - [BestModelSelector] Đánh giá mô hình: randomforest...
-2025-12-10 22:02:47,242 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,242 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: RandomForestClassifier
-2025-12-10 22:02:47,453 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: RandomForestClassifier
-2025-12-10 22:02:47,453 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,453 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,453 - INFO - [Evaluate] Bắt đầu đánh giá mô hình RandomForestClassifier...
-2025-12-10 22:02:47,523 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9725, 'precision': 0.9772499452941528, 'recall': 0.9621901429204162, 'f1': 0.9693771772816123, 'roc_auc_ovr': 0.9987443709449599}
-2025-12-10 22:02:47,523 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,523 - INFO - randomforest f1: 0.9694
-2025-12-10 22:02:47,524 - INFO - [BestModelSelector] Đánh giá mô hình: xgboost...
-2025-12-10 22:02:47,524 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,524 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: XGBClassifier
-2025-12-10 22:02:47,730 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: XGBClassifier
-2025-12-10 22:02:47,731 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,733 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,733 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
-2025-12-10 22:02:47,751 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:02:47,751 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,752 - INFO - xgboost f1: 1.0000
-2025-12-10 22:02:47,753 - INFO - [BestModelSelector] Đánh giá mô hình: lightgbm...
-2025-12-10 22:02:47,753 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:47,753 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LGBMClassifier
-2025-12-10 22:02:48,006 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LGBMClassifier
-2025-12-10 22:02:48,006 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:48,006 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:48,006 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
-2025-12-10 22:02:48,026 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:02:48,026 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:48,027 - INFO - lightgbm f1: 1.0000
-2025-12-10 22:02:48,027 - INFO - [BestModelSelector] Best model trước tối ưu tham số: xgboost với f1: 1.0000
-2025-12-10 22:02:48,027 - INFO - [BestModelSelector] Tối ưu tham số cho xgboost với grid...
-2025-12-10 22:02:48,027 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:02:48,027 - INFO - [GridSearch] Bắt đầu tối ưu tham số mô hình: xgboost
-2025-12-10 22:02:48,027 - INFO - [GridSearch] Scoring: f1
-2025-12-10 22:02:48,027 - INFO - [GridSearch] CV folds: 3
-2025-12-10 22:03:08,801 - INFO - Kết quả từng combination:
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 1: score=0.9342, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 2: score=0.9383, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 3: score=0.9341, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 4: score=0.9504, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 5: score=0.9537, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 6: score=0.9517, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 7: score=0.9689, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 8: score=0.9695, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 9: score=0.9691, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 10: score=0.9845, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 11: score=0.9836, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 12: score=0.9805, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 13: score=0.9883, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 14: score=0.9884, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 15: score=0.9877, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,803 - INFO - [GridSearch] Trial 16: score=0.9941, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 17: score=0.9946, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 18: score=0.9949, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 19: score=0.9932, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 20: score=0.9909, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 21: score=0.9923, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 22: score=0.9955, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 23: score=0.9957, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 24: score=0.9961, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 25: score=0.9966, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 26: score=0.9962, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 27: score=0.9977, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 28: score=0.9886, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 29: score=0.9907, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 30: score=0.9905, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 31: score=0.9969, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 32: score=0.9964, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 33: score=0.9969, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 34: score=0.9967, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 35: score=0.9972, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 36: score=0.9978, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 37: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 38: score=0.9979, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 39: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 40: score=0.9985, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 41: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 42: score=0.9989, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 43: score=0.9978, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 44: score=0.9977, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 45: score=0.9985, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 46: score=0.9988, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,804 - INFO - [GridSearch] Trial 47: score=0.9983, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 48: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 49: score=0.9988, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 50: score=0.9985, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 51: score=0.9987, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 52: score=0.9977, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 53: score=0.9981, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 54: score=0.9983, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 55: score=0.9964, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 56: score=0.9963, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 57: score=0.9967, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 58: score=0.9963, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 59: score=0.9961, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 60: score=0.9973, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 61: score=0.9962, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 62: score=0.9969, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 63: score=0.9982, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 64: score=0.9985, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 65: score=0.9984, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 66: score=0.9987, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 67: score=0.9981, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 68: score=0.9979, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 69: score=0.9983, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 70: score=0.9973, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 71: score=0.9973, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 72: score=0.9976, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 73: score=0.9982, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 74: score=0.9979, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 75: score=0.9984, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 50, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 76: score=0.9978, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 77: score=0.9977, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 78: score=0.9984, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,805 - INFO - [GridSearch] Trial 79: score=0.9977, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}
-2025-12-10 22:03:08,806 - INFO - [GridSearch] Trial 80: score=0.9973, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
-2025-12-10 22:03:08,806 - INFO - [GridSearch] Trial 81: score=0.9982, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'subsample': 1.0}
-2025-12-10 22:03:08,806 - INFO - [GridSearch] Best Params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}
-2025-12-10 22:03:08,806 - INFO - [GridSearch] Best CV Score: 0.9989
-2025-12-10 22:03:08,806 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:03:08,817 - INFO - [BestModelSelector] Hoàn thành chọn mô hình tốt nhất: xgboost
-2025-12-10 22:03:08,817 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:03:09,111 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:03:09,111 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
-2025-12-10 22:03:09,139 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:03:09,139 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:03:11,744 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:03:11,744 - INFO - [GridSearch] Bắt đầu tối ưu tham số mô hình: lightgbm
-2025-12-10 22:03:11,744 - INFO - [GridSearch] Scoring: f1
-2025-12-10 22:03:11,744 - INFO - [GridSearch] CV folds: 3
-2025-12-10 22:05:07,323 - INFO - Kết quả từng combination:
-2025-12-10 22:05:07,324 - INFO - [GridSearch] Trial 1: score=0.9737, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 2: score=0.9737, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 3: score=0.9765, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 4: score=0.9765, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 5: score=0.9745, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 6: score=0.9745, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 7: score=0.9739, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 8: score=0.9739, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 9: score=0.9760, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 10: score=0.9760, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 11: score=0.9749, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,325 - INFO - [GridSearch] Trial 12: score=0.9749, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 13: score=0.9982, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 14: score=0.9982, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 15: score=0.9980, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 16: score=0.9980, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 17: score=0.9971, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 18: score=0.9971, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 19: score=0.9978, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 20: score=0.9978, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 21: score=0.9977, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 22: score=0.9977, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,326 - INFO - [GridSearch] Trial 23: score=0.9973, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 24: score=0.9973, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 25: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 26: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 27: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 28: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 29: score=0.9876, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 30: score=0.9876, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 31: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 32: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 33: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 34: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 35: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,327 - INFO - [GridSearch] Trial 36: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 37: score=0.9990, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 38: score=0.9990, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 39: score=0.9987, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 40: score=0.9987, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 41: score=0.9988, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 42: score=0.9988, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 43: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
-2025-12-10 22:05:07,328 - INFO - [GridSearch] Trial 44: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
-2025-12-10 22:05:07,329 - INFO - [GridSearch] Trial 45: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
-2025-12-10 22:05:07,329 - INFO - [GridSearch] Trial 46: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
-2025-12-10 22:05:07,329 - INFO - [GridSearch] Trial 47: score=0.9992, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,329 - INFO - [GridSearch] Trial 48: score=0.9992, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
-2025-12-10 22:05:07,329 - INFO - [GridSearch] Best Params: {'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
-2025-12-10 22:05:07,329 - INFO - [GridSearch] Best CV Score: 0.9992
-2025-12-10 22:05:07,329 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:05:07,575 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
-2025-12-10 22:05:07,575 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
-2025-12-10 22:05:07,608 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': 1.0}
-2025-12-10 22:05:07,608 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:30,617 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:30,618 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LogisticRegression
+2025-12-11 17:16:30,659 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LogisticRegression
+2025-12-11 17:16:30,659 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:30,738 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:30,738 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LogisticRegression...
+2025-12-11 17:16:30,748 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9995, 'precision': 0.999298245614035, 'recall': 0.9997170345217884, 'f1': 0.9995072102567085, 'roc_auc_ovr': np.float64(0.999997817963355)}
+2025-12-11 17:16:30,748 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:31,078 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:31,078 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:16:31,274 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:16:31,274 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:31,380 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:31,381 - INFO - [Evaluate] Bắt đầu đánh giá mô hình RandomForestClassifier...
+2025-12-11 17:16:31,445 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9725, 'precision': 0.9772499452941528, 'recall': 0.9621901429204162, 'f1': 0.9693771772816123, 'roc_auc_ovr': np.float64(0.9987443709449599)}
+2025-12-11 17:16:31,445 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:55,687 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:55,687 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:16:56,086 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:16:56,086 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:56,237 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:56,237 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
+2025-12-11 17:16:56,258 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:16:56,258 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:56,949 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:56,950 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: XGBClassifier
+2025-12-11 17:16:57,267 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: XGBClassifier
+2025-12-11 17:16:57,268 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:57,419 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:57,419 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
+2025-12-11 17:16:57,446 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:16:57,446 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,091 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,091 - INFO - [BestModelSelector] Bắt đầu chọn mô hình tốt nhất...
+2025-12-11 17:16:58,091 - INFO - [BestModelSelector] Số lớp: 3
+2025-12-11 17:16:58,091 - INFO - [BestModelSelector] Phương pháp tối ưu tham số: optuna
+2025-12-11 17:16:58,091 - INFO - [BestModelSelector] Chỉ số đánh giá: f1
+2025-12-11 17:16:58,091 - INFO - [BestModelSelector] Đánh giá mô hình: logistic...
+2025-12-11 17:16:58,092 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,092 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LogisticRegression
+2025-12-11 17:16:58,194 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LogisticRegression
+2025-12-11 17:16:58,195 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,196 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,196 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LogisticRegression...
+2025-12-11 17:16:58,212 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9995, 'precision': 0.999298245614035, 'recall': 0.9997170345217884, 'f1': 0.9995072102567085, 'roc_auc_ovr': np.float64(0.999997817963355)}
+2025-12-11 17:16:58,212 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,213 - INFO - logistic f1: 0.9995
+2025-12-11 17:16:58,213 - INFO - [BestModelSelector] Đánh giá mô hình: randomforest...
+2025-12-11 17:16:58,213 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,213 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:16:58,413 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:16:58,414 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,414 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,414 - INFO - [Evaluate] Bắt đầu đánh giá mô hình RandomForestClassifier...
+2025-12-11 17:16:58,523 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9725, 'precision': 0.9772499452941528, 'recall': 0.9621901429204162, 'f1': 0.9693771772816123, 'roc_auc_ovr': np.float64(0.9987443709449599)}
+2025-12-11 17:16:58,523 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,523 - INFO - randomforest f1: 0.9694
+2025-12-11 17:16:58,523 - INFO - [BestModelSelector] Đánh giá mô hình: xgboost...
+2025-12-11 17:16:58,524 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,524 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: XGBClassifier
+2025-12-11 17:16:58,862 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: XGBClassifier
+2025-12-11 17:16:58,862 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,865 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,866 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
+2025-12-11 17:16:58,894 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:16:58,894 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,895 - INFO - xgboost f1: 1.0000
+2025-12-11 17:16:58,896 - INFO - [BestModelSelector] Đánh giá mô hình: lightgbm...
+2025-12-11 17:16:58,896 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:58,896 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:16:59,452 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:16:59,452 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:59,452 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:59,452 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
+2025-12-11 17:16:59,481 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:16:59,481 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:59,482 - INFO - lightgbm f1: 1.0000
+2025-12-11 17:16:59,482 - INFO - [BestModelSelector] Best model trước tối ưu tham số: xgboost với f1: 1.0000
+2025-12-11 17:16:59,482 - INFO - [BestModelSelector] Tối ưu tham số cho xgboost với optuna...
+2025-12-11 17:16:59,482 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:16:59,483 - INFO - [Optuna] Bắt đầu tối ưu tham số cho mô hình: xgboost
+2025-12-11 17:16:59,483 - INFO - [Optuna] Scoring: f1
+2025-12-11 17:16:59,483 - INFO - [Optuna] Số trial: 30, CV folds: 3
+2025-12-11 17:16:59,483 - INFO - [Optuna] Số lớp: 3
+2025-12-11 17:17:00,958 - INFO - [Optuna] Trial 0 params: {'n_estimators': 150, 'learning_rate': 0.1540359659501924, 'max_depth': 7, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9948925643992944
+2025-12-11 17:17:02,437 - INFO - [Optuna] Trial 1 params: {'n_estimators': 100, 'learning_rate': 0.001360354613611808, 'max_depth': 8, 'subsample': 0.8404460046972835, 'colsample_bytree': 0.8540362888980227, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.24718158140807314
+2025-12-11 17:17:03,252 - INFO - [Optuna] Trial 2 params: {'n_estimators': 100, 'learning_rate': 0.17052641538983093, 'max_depth': 7, 'subsample': 0.6849356442713105, 'colsample_bytree': 0.5909124836035503, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9940294365355934
+2025-12-11 17:17:04,079 - INFO - [Optuna] Trial 3 params: {'n_estimators': 100, 'learning_rate': 0.005012686302434875, 'max_depth': 6, 'subsample': 0.7727780074568463, 'colsample_bytree': 0.645614570099021, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.8877072213570748
+2025-12-11 17:17:05,510 - INFO - [Optuna] Trial 4 params: {'n_estimators': 250, 'learning_rate': 0.002094013887393744, 'max_depth': 4, 'subsample': 0.7465447373174767, 'colsample_bytree': 0.728034992108518, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.8640306868110068
+2025-12-11 17:17:08,072 - INFO - [Optuna] Trial 7 params: {'n_estimators': 300, 'learning_rate': 0.0050225633119947675, 'max_depth': 3, 'subsample': 0.8736932106048627, 'colsample_bytree': 0.7200762468698007, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9114930633375783
+2025-12-11 17:17:10,134 - INFO - [Optuna] Trial 9 params: {'n_estimators': 250, 'learning_rate': 0.00521502669741166, 'max_depth': 6, 'subsample': 0.8186841117373118, 'colsample_bytree': 0.5924272277627636, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9535761682678316
+2025-12-11 17:17:11,353 - INFO - [Optuna] Trial 10 params: {'n_estimators': 150, 'learning_rate': 0.14013397578557643, 'max_depth': 8, 'subsample': 0.6071847502459279, 'colsample_bytree': 0.5076838686640521, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9936844366998788
+2025-12-11 17:17:12,368 - INFO - [Optuna] Trial 11 params: {'n_estimators': 150, 'learning_rate': 0.18680462820461602, 'max_depth': 7, 'subsample': 0.6719331269140577, 'colsample_bytree': 0.8218563683119118, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9970674862339687
+2025-12-11 17:17:13,568 - INFO - [Optuna] Trial 12 params: {'n_estimators': 150, 'learning_rate': 0.060946846664015675, 'max_depth': 7, 'subsample': 0.6861163483524778, 'colsample_bytree': 0.8339538705408651, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983017941541824
+2025-12-11 17:17:14,949 - INFO - [Optuna] Trial 13 params: {'n_estimators': 150, 'learning_rate': 0.05047558492134032, 'max_depth': 7, 'subsample': 0.6609562456023955, 'colsample_bytree': 0.8418107582650314, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980551654957495
+2025-12-11 17:17:16,198 - INFO - [Optuna] Trial 14 params: {'n_estimators': 200, 'learning_rate': 0.049937519849628964, 'max_depth': 5, 'subsample': 0.6209434239245378, 'colsample_bytree': 0.9015019989115804, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981795866387385
+2025-12-11 17:17:17,466 - INFO - [Optuna] Trial 15 params: {'n_estimators': 200, 'learning_rate': 0.047440170100602676, 'max_depth': 5, 'subsample': 0.6192731778108003, 'colsample_bytree': 0.960347899457147, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998302027012687
+2025-12-11 17:17:18,699 - INFO - [Optuna] Trial 16 params: {'n_estimators': 200, 'learning_rate': 0.04225921267089414, 'max_depth': 5, 'subsample': 0.7206659806026385, 'colsample_bytree': 0.9983773041041276, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983025634625696
+2025-12-11 17:17:20,035 - INFO - [Optuna] Trial 17 params: {'n_estimators': 200, 'learning_rate': 0.021312446943017205, 'max_depth': 5, 'subsample': 0.7341089806656805, 'colsample_bytree': 0.9980084946806067, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980566093998612
+2025-12-11 17:17:22,042 - INFO - [Optuna] Trial 19 params: {'n_estimators': 300, 'learning_rate': 0.03332369217624971, 'max_depth': 4, 'subsample': 0.6378848877092145, 'colsample_bytree': 0.9401564261435852, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9979334430693455
+2025-12-11 17:17:23,236 - INFO - [Optuna] Trial 20 params: {'n_estimators': 200, 'learning_rate': 0.08960898560441834, 'max_depth': 5, 'subsample': 0.7734833258724269, 'colsample_bytree': 0.953286131001336, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998302027012687
+2025-12-11 17:17:24,414 - INFO - [Optuna] Trial 21 params: {'n_estimators': 200, 'learning_rate': 0.08546829525130939, 'max_depth': 5, 'subsample': 0.7745433243260874, 'colsample_bytree': 0.9679606782372898, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981795137022286
+2025-12-11 17:17:25,652 - INFO - [Optuna] Trial 22 params: {'n_estimators': 200, 'learning_rate': 0.0927926437467345, 'max_depth': 5, 'subsample': 0.9060814768193066, 'colsample_bytree': 0.8844014060733152, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984257730335208
+2025-12-11 17:17:27,960 - INFO - [Optuna] Trial 25 params: {'n_estimators': 200, 'learning_rate': 0.031239995578812668, 'max_depth': 6, 'subsample': 0.8902171865448858, 'colsample_bytree': 0.8888030765280213, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998548168445776
+2025-12-11 17:17:30,236 - INFO - [Optuna] Trial 27 params: {'n_estimators': 250, 'learning_rate': 0.029000426438232387, 'max_depth': 6, 'subsample': 0.8835141831651535, 'colsample_bytree': 0.9194459837903438, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998548168445776
+2025-12-11 17:17:34,266 - INFO - [Optuna] Trial 29 params: {'n_estimators': 250, 'learning_rate': 0.026044823902254054, 'max_depth': 6, 'subsample': 0.9494122707371521, 'colsample_bytree': 0.7901075167061383, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984251920610578
+2025-12-11 17:17:34,267 - INFO - [Optuna] Best Params: {'n_estimators': 200, 'learning_rate': 0.031239995578812668, 'max_depth': 6, 'subsample': 0.8902171865448858, 'colsample_bytree': 0.8888030765280213, 'random_state': 42}
+2025-12-11 17:17:34,268 - INFO - [Optuna] Best CV Score: 0.9985
+2025-12-11 17:17:34,268 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:17:35,077 - INFO - [BestModelSelector] Hoàn thành chọn mô hình tốt nhất: xgboost
+2025-12-11 17:17:35,077 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:17:35,270 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:17:35,270 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
+2025-12-11 17:17:35,293 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:17:35,293 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:17:38,565 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:17:38,565 - INFO - [Optuna] Bắt đầu tối ưu tham số cho mô hình: lightgbm
+2025-12-11 17:17:38,565 - INFO - [Optuna] Scoring: f1
+2025-12-11 17:17:38,565 - INFO - [Optuna] Số trial: 30, CV folds: 3
+2025-12-11 17:17:38,565 - INFO - [Optuna] Số lớp: 3
+2025-12-11 17:17:39,645 - INFO - [Optuna] Trial 0 params: {'n_estimators': 425, 'learning_rate': 0.1540359659501924, 'num_leaves': 98, 'max_depth': 9, 'min_child_samples': 26, 'min_split_gain': 0.07080725777960455, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9989495888309445
+2025-12-11 17:17:40,385 - INFO - [Optuna] Trial 1 params: {'n_estimators': 212, 'learning_rate': 0.17052641538983093, 'num_leaves': 110, 'max_depth': 9, 'min_child_samples': 20, 'min_split_gain': 0.029122914019804193, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995068131438619
+2025-12-11 17:17:44,115 - INFO - [Optuna] Trial 2 params: {'n_estimators': 567, 'learning_rate': 0.002094013887393744, 'num_leaves': 49, 'max_depth': 5, 'min_child_samples': 26, 'min_split_gain': 0.0046450412719997725, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9815530872825445
+2025-12-11 17:17:46,600 - INFO - [Optuna] Trial 3 params: {'n_estimators': 565, 'learning_rate': 0.002468204407989012, 'num_leaves': 23, 'max_depth': 3, 'min_child_samples': 29, 'min_split_gain': 0.04401524937396013, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9518332480343835
+2025-12-11 17:17:48,418 - INFO - [Optuna] Trial 4 params: {'n_estimators': 273, 'learning_rate': 0.013785322267847979, 'num_leaves': 19, 'max_depth': -1, 'min_child_samples': 24, 'min_split_gain': 0.018485445552552705, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9986712609409626
+2025-12-11 17:17:50,897 - INFO - [Optuna] Trial 5 params: {'n_estimators': 782, 'learning_rate': 0.06075805702761636, 'num_leaves': 122, 'max_depth': 5, 'min_child_samples': 6, 'min_split_gain': 0.032533033076326434, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9992606276846757
+2025-12-11 17:18:01,919 - INFO - [Optuna] Trial 8 params: {'n_estimators': 718, 'learning_rate': 0.027178637804725722, 'num_leaves': 53, 'max_depth': 7, 'min_child_samples': 36, 'min_split_gain': 0.04722149251619493, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9993517393219147
+2025-12-11 17:18:04,703 - INFO - [Optuna] Trial 10 params: {'n_estimators': 212, 'learning_rate': 0.1400250848362196, 'num_leaves': 81, 'max_depth': 9, 'min_child_samples': 16, 'min_split_gain': 0.06902470735691452, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9993836039521907
+2025-12-11 17:18:06,367 - INFO - [Optuna] Trial 11 params: {'n_estimators': 205, 'learning_rate': 0.18630877681457703, 'num_leaves': 80, 'max_depth': 9, 'min_child_samples': 16, 'min_split_gain': 0.0707545630928997, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9991366016165943
+2025-12-11 17:18:09,043 - INFO - [Optuna] Trial 12 params: {'n_estimators': 339, 'learning_rate': 0.09230801534212475, 'num_leaves': 85, 'max_depth': 9, 'min_child_samples': 17, 'min_split_gain': 0.06935547910049335, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995069297231431
+2025-12-11 17:18:11,892 - INFO - [Optuna] Trial 13 params: {'n_estimators': 360, 'learning_rate': 0.07004029239693715, 'num_leaves': 125, 'max_depth': 9, 'min_child_samples': 13, 'min_split_gain': 0.0880030607579906, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9991366016165943
+2025-12-11 17:18:16,700 - INFO - [Optuna] Trial 15 params: {'n_estimators': 334, 'learning_rate': 0.081997382684717, 'num_leaves': 92, 'max_depth': 9, 'min_child_samples': 33, 'min_split_gain': 0.06254529008796238, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9992601613675506
+2025-12-11 17:18:32,478 - INFO - [Optuna] Trial 20 params: {'n_estimators': 261, 'learning_rate': 0.03620991374395948, 'num_leaves': 51, 'max_depth': 7, 'min_child_samples': 20, 'min_split_gain': 0.05442385367607053, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995068131438619
+2025-12-11 17:18:36,157 - INFO - [Optuna] Trial 21 params: {'n_estimators': 265, 'learning_rate': 0.03740110225430094, 'num_leaves': 47, 'max_depth': 7, 'min_child_samples': 18, 'min_split_gain': 0.05558909949554077, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9992601613675506
+2025-12-11 17:18:37,916 - INFO - [Optuna] Trial 22 params: {'n_estimators': 205, 'learning_rate': 0.10247266197078812, 'num_leaves': 35, 'max_depth': 7, 'min_child_samples': 21, 'min_split_gain': 0.08040096108216883, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9993836039521907
+2025-12-11 17:18:41,239 - INFO - [Optuna] Trial 23 params: {'n_estimators': 319, 'learning_rate': 0.051719905249670114, 'num_leaves': 61, 'max_depth': 7, 'min_child_samples': 19, 'min_split_gain': 0.054289924395131806, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9994749485135858
+2025-12-11 17:18:45,533 - INFO - [Optuna] Trial 26 params: {'n_estimators': 303, 'learning_rate': 0.10212378873597323, 'num_leaves': 91, 'max_depth': 9, 'min_child_samples': 23, 'min_split_gain': 0.06233058746027933, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9991366016165943
+2025-12-11 17:18:50,166 - INFO - [Optuna] Trial 27 params: {'n_estimators': 493, 'learning_rate': 0.03690499304194471, 'num_leaves': 59, 'max_depth': 9, 'min_child_samples': 15, 'min_split_gain': 0.049152265333339364, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995069297231431
+2025-12-11 17:18:51,958 - INFO - [Optuna] Trial 28 params: {'n_estimators': 525, 'learning_rate': 0.12022387436264052, 'num_leaves': 102, 'max_depth': 9, 'min_child_samples': 14, 'min_split_gain': 0.018287000385031563, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995069297231431
+2025-12-11 17:18:54,782 - INFO - [Optuna] Trial 29 params: {'n_estimators': 501, 'learning_rate': 0.01890349349981209, 'num_leaves': 97, 'max_depth': 9, 'min_child_samples': 9, 'min_split_gain': 0.0772774605551797, 'random_state': 42, 'n_jobs': 1, 'verbosity': -1, 'objective': 'multiclass', 'num_class': 3} - mean_score: 0.9995069297231431
+2025-12-11 17:18:54,784 - INFO - [Optuna] Best Params: {'n_estimators': 339, 'learning_rate': 0.09230801534212475, 'num_leaves': 85, 'max_depth': 9, 'min_child_samples': 17, 'min_split_gain': 0.06935547910049335, 'random_state': 42}
+2025-12-11 17:18:54,785 - INFO - [Optuna] Best CV Score: 0.9995
+2025-12-11 17:18:54,785 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:55,472 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:55,472 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
+2025-12-11 17:18:55,497 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:18:55,497 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,122 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,122 - INFO - [BestModelSelector] Bắt đầu chọn mô hình tốt nhất...
+2025-12-11 17:18:58,123 - INFO - [BestModelSelector] Số lớp: 3
+2025-12-11 17:18:58,123 - INFO - [BestModelSelector] Phương pháp tối ưu tham số: grid
+2025-12-11 17:18:58,123 - INFO - [BestModelSelector] Chỉ số đánh giá: f1
+2025-12-11 17:18:58,123 - INFO - [BestModelSelector] Đánh giá mô hình: logistic...
+2025-12-11 17:18:58,123 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,124 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LogisticRegression
+2025-12-11 17:18:58,178 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LogisticRegression
+2025-12-11 17:18:58,178 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,178 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,178 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LogisticRegression...
+2025-12-11 17:18:58,189 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9995, 'precision': 0.999298245614035, 'recall': 0.9997170345217884, 'f1': 0.9995072102567085, 'roc_auc_ovr': np.float64(0.999997817963355)}
+2025-12-11 17:18:58,189 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,189 - INFO - logistic f1: 0.9995
+2025-12-11 17:18:58,189 - INFO - [BestModelSelector] Đánh giá mô hình: randomforest...
+2025-12-11 17:18:58,190 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,190 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:18:58,410 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:18:58,410 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,410 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,410 - INFO - [Evaluate] Bắt đầu đánh giá mô hình RandomForestClassifier...
+2025-12-11 17:18:58,505 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9725, 'precision': 0.9772499452941528, 'recall': 0.9621901429204162, 'f1': 0.9693771772816123, 'roc_auc_ovr': np.float64(0.9987443709449599)}
+2025-12-11 17:18:58,506 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,509 - INFO - randomforest f1: 0.9694
+2025-12-11 17:18:58,509 - INFO - [BestModelSelector] Đánh giá mô hình: xgboost...
+2025-12-11 17:18:58,509 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,509 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: XGBClassifier
+2025-12-11 17:18:58,851 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: XGBClassifier
+2025-12-11 17:18:58,851 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,854 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,854 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
+2025-12-11 17:18:58,880 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:18:58,881 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,882 - INFO - xgboost f1: 1.0000
+2025-12-11 17:18:58,882 - INFO - [BestModelSelector] Đánh giá mô hình: lightgbm...
+2025-12-11 17:18:58,882 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:58,882 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:18:59,235 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:18:59,235 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:59,235 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:59,235 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
+2025-12-11 17:18:59,266 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:18:59,266 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:59,268 - INFO - lightgbm f1: 1.0000
+2025-12-11 17:18:59,268 - INFO - [BestModelSelector] Best model trước tối ưu tham số: xgboost với f1: 1.0000
+2025-12-11 17:18:59,268 - INFO - [BestModelSelector] Tối ưu tham số cho xgboost với grid...
+2025-12-11 17:18:59,269 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:18:59,269 - INFO - [GridSearch] Bắt đầu tối ưu tham số mô hình: xgboost
+2025-12-11 17:18:59,269 - INFO - [GridSearch] Scoring: f1
+2025-12-11 17:18:59,269 - INFO - [GridSearch] CV folds: 3
+2025-12-11 17:19:27,883 - INFO - Kết quả từng combination:
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 1: score=0.8533, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 2: score=0.8477, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 3: score=0.8387, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 4: score=0.9322, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 5: score=0.9320, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 6: score=0.9312, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 7: score=0.9647, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,885 - INFO - [GridSearch] Trial 8: score=0.9668, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 9: score=0.9654, params={'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 10: score=0.9585, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 11: score=0.9592, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 12: score=0.9562, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 13: score=0.9840, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 14: score=0.9847, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 15: score=0.9816, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 16: score=0.9941, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 17: score=0.9938, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 18: score=0.9946, params={'learning_rate': 0.01, 'max_depth': 5, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 19: score=0.9873, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 20: score=0.9866, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 21: score=0.9875, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,886 - INFO - [GridSearch] Trial 22: score=0.9951, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 23: score=0.9948, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 24: score=0.9955, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 25: score=0.9966, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 26: score=0.9965, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 27: score=0.9984, params={'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 28: score=0.9889, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 29: score=0.9911, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 30: score=0.9920, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 31: score=0.9971, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 32: score=0.9967, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 33: score=0.9965, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 34: score=0.9971, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 35: score=0.9968, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 36: score=0.9969, params={'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,887 - INFO - [GridSearch] Trial 37: score=0.9983, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 38: score=0.9981, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 39: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 40: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 41: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 42: score=0.9989, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 43: score=0.9979, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 44: score=0.9978, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 45: score=0.9987, params={'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 46: score=0.9989, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 47: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 48: score=0.9985, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 49: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,888 - INFO - [GridSearch] Trial 50: score=0.9985, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 51: score=0.9984, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 52: score=0.9978, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 53: score=0.9982, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 54: score=0.9982, params={'learning_rate': 0.1, 'max_depth': 7, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 55: score=0.9965, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 56: score=0.9964, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 57: score=0.9965, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 58: score=0.9963, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 59: score=0.9972, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 60: score=0.9971, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 61: score=0.9960, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,889 - INFO - [GridSearch] Trial 62: score=0.9967, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 63: score=0.9977, params={'learning_rate': 0.2, 'max_depth': 3, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 64: score=0.9984, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 65: score=0.9982, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 66: score=0.9991, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 67: score=0.9977, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 68: score=0.9979, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 69: score=0.9987, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 70: score=0.9972, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 71: score=0.9974, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 72: score=0.9982, params={'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,890 - INFO - [GridSearch] Trial 73: score=0.9984, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.7}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 74: score=0.9985, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 50, 'subsample': 0.8}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 75: score=0.9983, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 76: score=0.9983, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.7}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 77: score=0.9981, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 100, 'subsample': 0.8}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 78: score=0.9982, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 100, 'subsample': 1.0}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 79: score=0.9981, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.7}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 80: score=0.9977, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'subsample': 0.8}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Trial 81: score=0.9979, params={'learning_rate': 0.2, 'max_depth': 7, 'n_estimators': 200, 'subsample': 1.0}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Best Params: {'learning_rate': 0.2, 'max_depth': 5, 'n_estimators': 50, 'subsample': 1.0}
+2025-12-11 17:19:27,891 - INFO - [GridSearch] Best CV Score: 0.9991
+2025-12-11 17:19:27,891 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:19:27,914 - INFO - [BestModelSelector] Hoàn thành chọn mô hình tốt nhất: xgboost
+2025-12-11 17:19:27,914 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:19:28,298 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:19:28,298 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
+2025-12-11 17:19:28,329 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:19:28,329 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:19:33,057 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:19:33,058 - INFO - [GridSearch] Bắt đầu tối ưu tham số mô hình: lightgbm
+2025-12-11 17:19:33,058 - INFO - [GridSearch] Scoring: f1
+2025-12-11 17:19:33,058 - INFO - [GridSearch] CV folds: 3
+2025-12-11 17:21:44,030 - INFO - Kết quả từng combination:
+2025-12-11 17:21:44,044 - INFO - [GridSearch] Trial 1: score=0.9736, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,044 - INFO - [GridSearch] Trial 2: score=0.9736, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,044 - INFO - [GridSearch] Trial 3: score=0.9765, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 4: score=0.9765, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 5: score=0.9745, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 6: score=0.9745, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 7: score=0.9740, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 8: score=0.9740, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 9: score=0.9760, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 10: score=0.9760, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 11: score=0.9749, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 12: score=0.9749, params={'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 13: score=0.9979, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,045 - INFO - [GridSearch] Trial 14: score=0.9979, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 15: score=0.9980, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 16: score=0.9980, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 17: score=0.9973, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 18: score=0.9973, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 19: score=0.9978, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 20: score=0.9978, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 21: score=0.9977, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 22: score=0.9977, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 23: score=0.9974, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 24: score=0.9974, params={'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 25: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,046 - INFO - [GridSearch] Trial 26: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 27: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 28: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 29: score=0.9876, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 30: score=0.9876, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 31: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 32: score=0.9842, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 33: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 34: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 35: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 36: score=0.9874, params={'colsample_bytree': 1.0, 'learning_rate': 0.01, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,047 - INFO - [GridSearch] Trial 37: score=0.9992, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,049 - INFO - [GridSearch] Trial 38: score=0.9992, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 39: score=0.9988, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 40: score=0.9988, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 41: score=0.9988, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 42: score=0.9988, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 43: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 44: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 31, 'subsample': 0.9}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 45: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.7}
+2025-12-11 17:21:44,050 - INFO - [GridSearch] Trial 46: score=0.9991, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 63, 'subsample': 0.9}
+2025-12-11 17:21:44,051 - INFO - [GridSearch] Trial 47: score=0.9990, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.7}
+2025-12-11 17:21:44,051 - INFO - [GridSearch] Trial 48: score=0.9990, params={'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': 10, 'num_leaves': 127, 'subsample': 0.9}
+2025-12-11 17:21:44,051 - INFO - [GridSearch] Best Params: {'colsample_bytree': 1.0, 'learning_rate': 0.05, 'max_depth': -1, 'num_leaves': 31, 'subsample': 0.7}
+2025-12-11 17:21:44,051 - INFO - [GridSearch] Best CV Score: 0.9992
+2025-12-11 17:21:44,051 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:21:45,220 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:21:45,220 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
+2025-12-11 17:21:45,302 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:21:45,302 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:23:30,010 - INFO - NumExpr defaulting to 16 threads.
+2025-12-11 17:24:55,241 - INFO - NumExpr defaulting to 16 threads.
+2025-12-11 17:25:01,666 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:01,666 - INFO - [BestModelSelector] Bắt đầu chọn mô hình tốt nhất...
+2025-12-11 17:25:01,666 - INFO - [BestModelSelector] Số lớp: 3
+2025-12-11 17:25:01,666 - INFO - [BestModelSelector] Phương pháp tối ưu tham số: optuna
+2025-12-11 17:25:01,666 - INFO - [BestModelSelector] Chỉ số đánh giá: f1
+2025-12-11 17:25:01,666 - INFO - [BestModelSelector] Đánh giá mô hình: logistic...
+2025-12-11 17:25:01,667 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:01,667 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LogisticRegression
+2025-12-11 17:25:01,802 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LogisticRegression
+2025-12-11 17:25:01,802 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:01,802 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:01,803 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LogisticRegression...
+2025-12-11 17:25:01,818 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9995, 'precision': 0.999298245614035, 'recall': 0.9997170345217884, 'f1': 0.9995072102567085, 'roc_auc_ovr': np.float64(0.999997817963355)}
+2025-12-11 17:25:01,818 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:01,819 - INFO - logistic f1: 0.9995
+2025-12-11 17:25:01,820 - INFO - [BestModelSelector] Đánh giá mô hình: randomforest...
+2025-12-11 17:25:01,820 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:01,820 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:25:02,056 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: RandomForestClassifier
+2025-12-11 17:25:02,057 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,057 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,057 - INFO - [Evaluate] Bắt đầu đánh giá mô hình RandomForestClassifier...
+2025-12-11 17:25:02,121 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 0.9725, 'precision': 0.9772499452941528, 'recall': 0.9621901429204162, 'f1': 0.9693771772816123, 'roc_auc_ovr': np.float64(0.9987443709449599)}
+2025-12-11 17:25:02,122 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,122 - INFO - randomforest f1: 0.9694
+2025-12-11 17:25:02,122 - INFO - [BestModelSelector] Đánh giá mô hình: xgboost...
+2025-12-11 17:25:02,123 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,123 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: XGBClassifier
+2025-12-11 17:25:02,475 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: XGBClassifier
+2025-12-11 17:25:02,475 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,478 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,478 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
+2025-12-11 17:25:02,501 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:25:02,501 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,502 - INFO - xgboost f1: 1.0000
+2025-12-11 17:25:02,502 - INFO - [BestModelSelector] Đánh giá mô hình: lightgbm...
+2025-12-11 17:25:02,502 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,502 - INFO - [ModelTrainer] Bắt đầu huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:25:02,891 - INFO - [ModelTrainer] Hoàn thành huấn luyện mô hình: LGBMClassifier
+2025-12-11 17:25:02,891 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,891 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,891 - INFO - [Evaluate] Bắt đầu đánh giá mô hình LGBMClassifier...
+2025-12-11 17:25:02,911 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:25:02,911 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,911 - INFO - lightgbm f1: 1.0000
+2025-12-11 17:25:02,911 - INFO - [BestModelSelector] Best model trước tối ưu tham số: xgboost với f1: 1.0000
+2025-12-11 17:25:02,911 - INFO - [BestModelSelector] Tối ưu tham số cho xgboost với optuna...
+2025-12-11 17:25:02,912 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:02,912 - INFO - [Optuna] Bắt đầu tối ưu tham số cho mô hình: xgboost
+2025-12-11 17:25:02,912 - INFO - [Optuna] Scoring: f1
+2025-12-11 17:25:02,912 - INFO - [Optuna] Số trial: 30, CV folds: 3
+2025-12-11 17:25:02,912 - INFO - [Optuna] Số lớp: 3
+2025-12-11 17:25:04,173 - INFO - [Optuna] Trial 0 params: {'n_estimators': 150, 'learning_rate': 0.1540359659501924, 'max_depth': 7, 'subsample': 0.8394633936788146, 'colsample_bytree': 0.5780093202212182, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9948925643992944
+2025-12-11 17:25:05,345 - INFO - [Optuna] Trial 1 params: {'n_estimators': 100, 'learning_rate': 0.001360354613611808, 'max_depth': 8, 'subsample': 0.8404460046972835, 'colsample_bytree': 0.8540362888980227, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.24718158140807314
+2025-12-11 17:25:06,154 - INFO - [Optuna] Trial 2 params: {'n_estimators': 100, 'learning_rate': 0.17052641538983093, 'max_depth': 7, 'subsample': 0.6849356442713105, 'colsample_bytree': 0.5909124836035503, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9940294365355934
+2025-12-11 17:25:07,060 - INFO - [Optuna] Trial 3 params: {'n_estimators': 100, 'learning_rate': 0.005012686302434875, 'max_depth': 6, 'subsample': 0.7727780074568463, 'colsample_bytree': 0.645614570099021, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.8877072213570748
+2025-12-11 17:25:08,495 - INFO - [Optuna] Trial 4 params: {'n_estimators': 250, 'learning_rate': 0.002094013887393744, 'max_depth': 4, 'subsample': 0.7465447373174767, 'colsample_bytree': 0.728034992108518, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.8640306868110068
+2025-12-11 17:25:10,935 - INFO - [Optuna] Trial 7 params: {'n_estimators': 300, 'learning_rate': 0.0050225633119947675, 'max_depth': 3, 'subsample': 0.8736932106048627, 'colsample_bytree': 0.7200762468698007, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9114930633375783
+2025-12-11 17:25:13,068 - INFO - [Optuna] Trial 9 params: {'n_estimators': 250, 'learning_rate': 0.00521502669741166, 'max_depth': 6, 'subsample': 0.8186841117373118, 'colsample_bytree': 0.5924272277627636, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9535761682678316
+2025-12-11 17:25:14,317 - INFO - [Optuna] Trial 10 params: {'n_estimators': 150, 'learning_rate': 0.14013397578557643, 'max_depth': 8, 'subsample': 0.6071847502459279, 'colsample_bytree': 0.5076838686640521, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9936844366998788
+2025-12-11 17:25:15,382 - INFO - [Optuna] Trial 11 params: {'n_estimators': 150, 'learning_rate': 0.18680462820461602, 'max_depth': 7, 'subsample': 0.6719331269140577, 'colsample_bytree': 0.8218563683119118, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9970674862339687
+2025-12-11 17:25:16,782 - INFO - [Optuna] Trial 12 params: {'n_estimators': 150, 'learning_rate': 0.060946846664015675, 'max_depth': 7, 'subsample': 0.6861163483524778, 'colsample_bytree': 0.8339538705408651, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983017941541824
+2025-12-11 17:25:18,272 - INFO - [Optuna] Trial 13 params: {'n_estimators': 150, 'learning_rate': 0.05047558492134032, 'max_depth': 7, 'subsample': 0.6609562456023955, 'colsample_bytree': 0.8418107582650314, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980551654957495
+2025-12-11 17:25:19,593 - INFO - [Optuna] Trial 14 params: {'n_estimators': 200, 'learning_rate': 0.049937519849628964, 'max_depth': 5, 'subsample': 0.6209434239245378, 'colsample_bytree': 0.9015019989115804, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981795866387385
+2025-12-11 17:25:21,074 - INFO - [Optuna] Trial 15 params: {'n_estimators': 200, 'learning_rate': 0.047440170100602676, 'max_depth': 5, 'subsample': 0.6192731778108003, 'colsample_bytree': 0.960347899457147, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998302027012687
+2025-12-11 17:25:22,454 - INFO - [Optuna] Trial 16 params: {'n_estimators': 200, 'learning_rate': 0.04225921267089414, 'max_depth': 5, 'subsample': 0.7206659806026385, 'colsample_bytree': 0.9983773041041276, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9983025634625696
+2025-12-11 17:25:23,952 - INFO - [Optuna] Trial 17 params: {'n_estimators': 200, 'learning_rate': 0.021312446943017205, 'max_depth': 5, 'subsample': 0.7341089806656805, 'colsample_bytree': 0.9980084946806067, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9980566093998612
+2025-12-11 17:25:26,437 - INFO - [Optuna] Trial 19 params: {'n_estimators': 300, 'learning_rate': 0.03332369217624971, 'max_depth': 4, 'subsample': 0.6378848877092145, 'colsample_bytree': 0.9401564261435852, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9979334430693455
+2025-12-11 17:25:27,833 - INFO - [Optuna] Trial 20 params: {'n_estimators': 200, 'learning_rate': 0.08960898560441834, 'max_depth': 5, 'subsample': 0.7734833258724269, 'colsample_bytree': 0.953286131001336, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998302027012687
+2025-12-11 17:25:29,218 - INFO - [Optuna] Trial 21 params: {'n_estimators': 200, 'learning_rate': 0.08546829525130939, 'max_depth': 5, 'subsample': 0.7745433243260874, 'colsample_bytree': 0.9679606782372898, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9981795137022286
+2025-12-11 17:25:30,604 - INFO - [Optuna] Trial 22 params: {'n_estimators': 200, 'learning_rate': 0.0927926437467345, 'max_depth': 5, 'subsample': 0.9060814768193066, 'colsample_bytree': 0.8844014060733152, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984257730335208
+2025-12-11 17:25:33,469 - INFO - [Optuna] Trial 25 params: {'n_estimators': 200, 'learning_rate': 0.031239995578812668, 'max_depth': 6, 'subsample': 0.8902171865448858, 'colsample_bytree': 0.8888030765280213, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998548168445776
+2025-12-11 17:25:36,307 - INFO - [Optuna] Trial 27 params: {'n_estimators': 250, 'learning_rate': 0.029000426438232387, 'max_depth': 6, 'subsample': 0.8835141831651535, 'colsample_bytree': 0.9194459837903438, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.998548168445776
+2025-12-11 17:25:39,460 - INFO - [Optuna] Trial 29 params: {'n_estimators': 250, 'learning_rate': 0.026044823902254054, 'max_depth': 6, 'subsample': 0.9494122707371521, 'colsample_bytree': 0.7901075167061383, 'random_state': 42, 'n_jobs': 1, 'verbosity': 0, 'objective': 'multi:softprob', 'eval_metric': 'mlogloss', 'num_class': 3} - mean_score: 0.9984251920610578
+2025-12-11 17:25:39,460 - INFO - [Optuna] Best Params: {'n_estimators': 200, 'learning_rate': 0.031239995578812668, 'max_depth': 6, 'subsample': 0.8902171865448858, 'colsample_bytree': 0.8888030765280213, 'random_state': 42}
+2025-12-11 17:25:39,461 - INFO - [Optuna] Best CV Score: 0.9985
+2025-12-11 17:25:39,461 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:40,015 - INFO - [BestModelSelector] Hoàn thành chọn mô hình tốt nhất: xgboost
+2025-12-11 17:25:40,015 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:45,760 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────
+2025-12-11 17:25:45,760 - INFO - [Evaluate] Bắt đầu đánh giá mô hình XGBClassifier...
+2025-12-11 17:25:45,795 - INFO - [Evaluate] Kết quả đánh giá: {'accuracy': 1.0, 'precision': 1.0, 'recall': 1.0, 'f1': 1.0, 'roc_auc_ovr': np.float64(1.0)}
+2025-12-11 17:25:45,796 - INFO - ────────────────────────────────────────────────────────────────────────────────────────────

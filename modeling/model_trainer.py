@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from lightgbm import LGBMClassifier
 from xgboost import XGBClassifier
-from ..logs import logger
+from logs import logger
 
 logger.setup_logger()
 logger = logging.getLogger(__name__)

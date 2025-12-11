@@ -7,7 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from sklearn.model_selection import train_test_split
 
-from ..logs import logger
+from logs import logger
 from .model_trainer import ModelTrainer
 from .grid_tuner import GridTuner
 from .optuna_tuner import OptunaTuner
@@ -48,12 +48,12 @@ class ModelTrainPipeline:
         # Kiểm tra data được truyền vào là tên file hay là DataFrame
         if isinstance(data, str):
             input_path = Path(data)
-            if input_path.exists() or input_path.is_absolute() or '/' in data or '\\' in data:
+            if input_path.is_absolute() or input_path.parent != Path():
                 file_path = input_path
             else:
-                current_file_path = Path(__file__)
-                file_path = current_file_path.parent.parent / 'data' / input_path
-
+                # Mặc định lấy trong project/data/
+                current_dir = Path(__file__).resolve().parent.parent
+                file_path = current_dir / "data" / input_path.name
             self.df = pd.read_csv(file_path)
         elif isinstance(data, pd.DataFrame):
             self.df = data.copy()
@@ -169,7 +169,7 @@ class ModelTrainPipeline:
         df["model_name"] = model_name
         df["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-        base_dir = Path(__file__).parent.parent / "modeling"
+        base_dir = Path(__file__).parent.parent / "artifacts"
         output_path = Path(output_path_str)
 
         if output_path.suffix == "":
@@ -259,7 +259,7 @@ class ModelTrainPipeline:
             file_path = output_path
         else:
             current_file_path = Path(__file__)
-            file_path = current_file_path.parent.parent / 'modeling' / output_path
+            file_path = current_file_path.parent.parent / 'artifacts' / output_path
         joblib.dump(self.model, file_path)
 
     def load(self, input_path_str):
@@ -274,6 +274,6 @@ class ModelTrainPipeline:
             input_path_str = input_path
         else:
             current_file_path = Path(__file__)
-            file_path = current_file_path.parent.parent / 'modeling' / input_path
+            file_path = current_file_path.parent.parent / 'artifacts' / input_path
         self.model = joblib.load(file_path)
         return self.model

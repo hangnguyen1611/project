@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 from .model_config import MODEL_REGISTRY
-from ..logs import logger
+from logs import logger
 from .grid_tuner import GridTuner
 from .model_trainer import ModelTrainer
 from .optuna_tuner import OptunaTuner

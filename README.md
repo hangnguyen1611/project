@@ -27,6 +27,8 @@
 ## 3. Cấu trúc 
 ```
 project/
+├── artifacts/                     (Lưu các file/đối tượng tạo ra trong quá trình chạy)
+|
 ├── data/
 │   └── mental_health_dataset.csv  
 |
@@ -41,34 +43,50 @@ project/
 │   ├── model_config.py            (Cấu hình mô hình)
 │   ├── model_trainer.py           (Huấn luyện mô hình)
 │   ├── optuna_tuner.py            (Tối ưu siêu tham số Optuna)
-│   └── pipeline_model.py          (Pipeline mô hình)
+│   ├── pipeline_model.py          (Pipeline mô hình)
+|   └── runner_train.py
 |
 ├── notebook/
-│   └── project.ipynb              (Notebook chính)
+│   └── project.ipynb              (notebook)
 |
 ├── preprocessing/
 │   ├── preprocessor.py            (Tiền xử lý dữ liệu)
+|   ├── runner_preprocess.py
 │   └── visualizer.py              (Trực quan hóa dữ liệu)
 |
-├── __init__.py                    
+├── main.py                        (python script)
 ├── README.md                 
 └── requirements.txt              
 ```                  
 ## 4. Hướng dẫn cài đặt
-```python
+```
 python --version
 python -m venv venv
 pip install -r requirements.txt
 ```
 ## 5. Hướng dẫn chạy
-_Chạy trên file project.ipynb để xem quá trình tiền xử lý và huấn luyện mô hình._
+_**Chạy file main.py**_
+Chạy các lệnh sau trên **terminal**:
+```
+# Tiền xử lý dữ liệu
+python -m main --mode preprocess --data mental_health_dataset.csv 
+
+# Huấn luyện mô hình, chọn mô hình tốt nhất
+python -m main --mode train --data new_mental_health_dataset.csv
+```
+_**Chạy trên file project.ipynb để xem quá trình tiền xử lý và huấn luyện mô hình**_
 
 ### a. Import Module
 ```python
 import sys
-sys.path.append('../../')
+from pathlib import Path
 
-from project import *
+project_root = Path.cwd().parent  
+sys.path.append(str(project_root))
+
+from preprocessing.preprocessor import DataPreprocessor
+from preprocessing.visualizer import DataVisualizer
+from modeling.pipeline_model import ModelTrainPipeline
 ```
 
 ### b. Tiền xử lý dữ liệu
@@ -108,6 +126,6 @@ pipe.shap_beeswarm()
 pipe.shap_dependence()
 pipe.shap_force(sample_index=200)
 ```
-_Kết quả train model sẽ được xuất file và lưu tại thư mục `modeling`._
+_Kết quả train model sẽ được xuất file và lưu tại thư mục `artifacts`._
 ### f. Theo dõi log
 Các thông báo về quá trình _train model_ sẽ được lưu trữ tại thư mục `logs`.

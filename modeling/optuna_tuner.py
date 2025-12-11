@@ -7,7 +7,7 @@ from sklearn.model_selection import StratifiedKFold
 from xgboost import XGBClassifier
 from sklearn.metrics import roc_auc_score, f1_score
 from .model_config import MODEL_REGISTRY
-from ..logs import logger
+from logs import logger
 
 logger.setup_logger()
 logger = logging.getLogger(__name__)

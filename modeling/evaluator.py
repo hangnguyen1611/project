@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-from ..logs import logger
+from logs import logger
 logger.setup_logger()
 logger = logging.getLogger(__name__)
 

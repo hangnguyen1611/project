@@ -35,11 +35,15 @@ class DataPreprocessor:
     @classmethod 
     def load(cls, input_path_str = 'mental_health_dataset.csv'):
         input_path = Path(input_path_str)
-        if input_path.exists() or input_path.is_absolute() or '/' in input_path_str or '\\' in input_path_str:
-            file_path = input_path
+        current_dir = Path(__file__).resolve().parent.parent
+
+        if not input_path.is_absolute():
+            if str(input_path).startswith("data/") or str(input_path).startswith("data\\"):
+                file_path = current_dir / input_path
+            else:
+                file_path = current_dir / "data" / input_path.name
         else:
-            current_file_path = Path(__file__)
-            file_path = current_file_path.parent.parent / 'data' / input_path
+            file_path = input_path
 
         ext = file_path.suffix.lower()
 
