@@ -66,6 +66,7 @@ pip install -r requirements.txt
 ```
 ## 5. Hướng dẫn chạy
 _**Chạy file main.py**_
+
 Chạy các lệnh sau trên **terminal**:
 ```
 # Tiền xử lý dữ liệu
